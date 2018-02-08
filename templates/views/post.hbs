@@ -1,0 +1,20 @@
+<article class="blog blog-dtl">
+	<span class="back-btn"><a href="/"><i class="fa fa-arrow-circle-left"></i>  Back</a></span>
+	
+	<header>
+		{{#if data.post.image.url}}
+		<div class="blog-dtl-img blog-img">
+			<img src="{{{cloudinaryUrl data.post.image width=750 height=450 crop='fit' }}}" class="img-responsive img-thumbnail">
+		</div>
+		{{/if}}
+		<h2>{{data.post.title}}</h2>
+		<h5>
+		{{{categoryList data.post.categories prefix="Posted in "}}}
+		{{#if author.name.first}}by {{author.name.first}}{{/if}}
+		</h5>
+	</header>
+	<div class="post">
+		
+		{{{data.post.content.extended}}}
+	</div>
+</article>

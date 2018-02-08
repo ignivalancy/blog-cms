@@ -1,0 +1,403 @@
+.setting-section {
+    .setting-grade__container {
+        .setting-grade__top {
+            @include padding(50 40);
+            background-color: $white;
+            @include border-round(4);
+            @include fontsize(18);
+        }
+        .title {
+            @include fontsize(25);
+            @include hel-roman;
+        }
+        .setting-grade__top__filter {
+            @include padding-top(30);
+            .form-group {
+                display: $inline;
+                @include padding(0 10);
+                @include margin-bottom(0);
+                vertical-align: middle;
+                &:first-of-type {
+                    @include padding-left(0);
+                }
+            }
+            .edit-grade__btn {
+                background-color: $color3;
+                color: $white;
+                height: 50px;
+                text-align: center;
+                display: $block;
+                border: 0;
+                padding: 0;
+                width: 55px;
+                @include fontsize(20);
+                @include border-round(5);
+                [class*="icon-"] {
+                    line-height: 2.5;
+                }
+            }
+            .select-control {
+                @include border(1, solid, #cfcfcf);
+                @include border-round(4);
+                width: 350px;
+                select {
+                    @include fontsize(18);
+                    @include hel-roman;
+                    @include padding(10 15);
+                    border: 0;
+                    width: 100%;
+                }
+                &:after {
+                    color: #676767;
+                    right: 15px;
+                    @include fontsize(18);
+                }
+            }
+        }
+        .setting-grade__list__container {
+            @include margin-top(40);
+            & > .row {
+                @include margin(0 -30);
+                [class*="col-"] {
+                    @include padding(0 30);
+                }
+            }
+            .grade-box {
+                @include margin-bottom(40);
+                .grade-box__body {
+                    height: 450px;
+                }
+            }
+        }
+    }
+    .setting-bg-section {
+        .setting-bg__top {
+            background-color: $white;
+            @include border-round(4);
+            @include padding(30);
+            .title {
+                color: $s-color;
+                @include hel-roman;
+                @include fontsize(25);
+            }
+        }
+        .setting-bg__top__info {
+            @include padding(30);
+            background-color: $white;
+            @include border-round(4);
+            @include margin-bottom(15);
+            .form-group {
+                display: $inline;
+                @include padding(0 10);
+                @include margin-bottom(0);
+                vertical-align: middle;
+            }
+            label {
+                @include hel-roman;
+                @include fontsize(24);
+            }
+            .select-control {
+                @include border(1, solid, #cfcfcf);
+                @include border-round(4);
+                width: 350px;
+                select {
+                    @include fontsize(18);
+                    @include hel-roman;
+                    @include padding(10 15);
+                    border: 0;
+                    width: 100%;
+                }
+                &:after {
+                    color: #676767;
+                    right: 15px;
+                    @include fontsize(18);
+                }
+            }
+        }
+        .all-bg-list {
+            @include margin-top(30);
+            .data-list-block {
+                @include padding-top(0);
+            }
+            .all-bg-list__aside {
+                .grade-box__body {
+                    max-height: 600px;
+                }
+            }
+        }
+    }
+    .st-section {
+        .st__top {
+            background-color: $white;
+            @include padding(30);
+            @include border-round(4);
+            h3.title {
+                @include fontsize(25);
+                @include hel-roman;
+            }
+            span.total {
+                @include fontsize(20);
+            }
+            .add-s-btn {
+                [class*="icon-"] {
+                    @include fontsize(15);
+                }
+            }
+        }
+        .filter-block {
+            @include margin-top(30);
+        }
+        .data-list-block {
+            @include padding-top(30);
+        }
+    }
+    .st-dtl-block__section {
+        .st-dtl-block__heading {
+            background-color: $white;
+            @include border-round(4);
+            @include padding(30);
+            @include pos(rel, null);
+            .back-btn {
+                @include pos(ab, 30px null null 30px);
+            }
+        }
+        .st-dtl-block {
+            background-color: $white;
+            @include border-round(4);
+            @include margin-top(10);
+            @include padding(40 60);
+            .st-dtl-block__img__block {
+                @include pos(rel, null);
+                text-align: center;
+                .st-dtl-block__img {
+                    @include pos(rel, null);
+                    width: 100px;
+                    margin: 0 auto 20px;
+                    img {
+                        width: 100px;
+                        height: 100px;
+                        @include circle();
+                    }
+                    span {
+                        @include pos(ab, null 0 0 null);
+                        width: 34px;
+                        height: 34px;
+                        color: $white;
+                        background-color: $color2;
+                        @include circle();
+                        @include fontsize(20);
+                        line-height: 2;
+                    }
+                }
+                h3.name {
+                    @include fontsize(25);
+                    @include hel-roman;
+                }
+                h4.status {
+                    @include fontsize(20);
+                    @include margin-top(10);
+                }
+            }
+            .st-dtl-block__info-list__block {
+                @include padding-top(70);
+                .st-dtl-block__info-list {
+                    @include fontsize(18);
+                    .title {
+                        @include fontsize(24);
+                        @include hel-roman;
+                    }
+                    ul {
+                        & > li {
+                            @include padding-bottom(50);
+                            .media {
+                                .media-left {
+                                    @include padding-right(30);
+                                    span.ico {
+                                        color: #727272;
+                                        @include fontsize(30);
+                                    }
+                                }
+                                .media-body {
+                                    span.label-name {
+                                        @include hel-roman;
+                                        color: #7d7b7b;
+                                    }
+                                    p {
+                                        @include fontsize(24);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .st-dtl-block__all-list {
+            @include padding(50 0 30);
+            .title {
+                @include hel-roman;
+                @include fontsize(25);
+            }
+            .data-list-block {
+                @inlcude padding-top: (30);
+            }
+        }
+    }
+}
+
+.st-add-block {
+    .st-add-form__heading {
+        background-color: $white;
+        @include border-round(4);
+        @include padding(30);
+        @include pos(rel, null);
+        .back-btn {
+            @include pos(ab, 30px null null 30px);
+        }
+    }
+    .st-add-form {
+        background-color: $white;
+        @include border-round(4);
+        @include padding(50 70 70);
+        @include margin-top(10);
+        .st-add-form__field-group {
+            & > .row {
+                @include margin(0 -25);
+                [class*="col-"] {
+                    @include padding(0 25);
+                }
+            }
+            .title {
+                @include hel-roman;
+                @include fontsize(24);
+                @include padding-bottom(50);
+            }
+            .d-f-field {
+               
+                .d-field-control {
+                    color: #bdb9b9;
+                    &::-webkit-input-placeholder {
+                        /* Chrome/Opera/Safari */
+                        color: #bdb9b9;
+                        opacity: 1;
+                    }
+                    &::-moz-placeholder {
+                        /* Firefox 19+ */
+                        color: #bdb9b9;
+                        opacity: 1;
+                    }
+                    &:-ms-input-placeholder {
+                        /* IE 10+ */
+                        color: #bdb9b9;
+                        opacity: 1;
+                    }
+                    &:-moz-placeholder {
+                        /* Firefox 18- */
+                        color: #bdb9b9;
+                        opacity: 1;
+                    }
+                }
+                .q-ico {
+                    color: #20c949;
+                    cursor: pointer;
+                    @include fontsize(20);
+                }
+                .tooltip {
+                    opacity: 1;
+                    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .22);
+                    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, .22);
+                    box-shadow: 0 0 5px rgba(0, 0, 0, .22);
+                    @include border-round(4);
+                    .tooltip-arrow {
+                        display: none;
+                    }
+                }
+            }
+            .bootstrap-tagsinput {
+                input {
+                    &::-webkit-input-placeholder {
+                        /* Chrome/Opera/Safari */
+                        color: #bdb9b9;
+                        opacity: 1;
+                    }
+                    &::-moz-placeholder {
+                        /* Firefox 19+ */
+                        color: #bdb9b9;
+                        opacity: 1;
+                    }
+                    &:-ms-input-placeholder {
+                        /* IE 10+ */
+                        color: #bdb9b9;
+                        opacity: 1;
+                    }
+                    &:-moz-placeholder {
+                        /* Firefox 18- */
+                        color: #bdb9b9;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.setting-prev-section {
+    .setting-prev__heading {
+        background-color: $white;
+        @include border-round(4);
+        @include padding(30);
+        text-align: center;
+        @include pos(rel, null);
+        .title {
+            @include fontsize(25);
+            @include hel-roman;
+        }
+        .back-btn {
+            @include pos(ab, 30px null null 30px);
+        }
+    }
+    .setting-prev__top-info {
+        @include padding(30);
+        @include margin-top(10);
+        background-color: $white;
+        @include border-round(4);
+        .form-group {
+            display: $inline;
+            @include padding(0 10);
+            @include margin-bottom(0);
+            vertical-align: middle;
+        }
+        label {
+            @include hel-roman;
+            @include fontsize(24);
+        }
+        .select-control {
+            @include border(1, solid, #cfcfcf);
+            @include border-round(4);
+            width: 350px;
+            select {
+                @include fontsize(18);
+                @include hel-roman;
+                @include padding(10 15);
+                border: 0;
+                width: 100%;
+            }
+            &:after {
+                color: #676767;
+                right: 15px;
+                @include fontsize(18);
+            }
+        }
+    }
+    .setting-grade__list__container {
+        @include margin-top(40);
+        .setting-grade__list__heading {
+            @include margin-bottom(25);
+            .title {
+                @include fontsize(20);
+                @include hel-roman;
+                @include margin-top(10);
+            }
+        }
+    }
+}

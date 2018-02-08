@@ -1,0 +1,39 @@
+// Core Variables and Mixing
+@import 'base';
+
+//layout
+@import "responsive/layout";
+
+//home
+@import "responsive/home";
+
+//login
+@import "responsive/login";
+
+//dashboard-home
+@import "responsive/dashboard-home";
+
+//dashboard-layout
+@import "responsive/dashboard-layout";
+
+//dashboard-notification
+@import "responsive/dashboard-notifcation";
+//dashboard-leaderboard
+@import "responsive/dashboard-leaderboard";
+//profile-setup
+@import "responsive/dashboard-profile-steup";
+//quiz
+@import "responsive/quiz";
+//reporting
+@import "responsive/reporting";
+//settings
+@import "responsive/settings";
+//tp-profile
+@import "responsive/dashboard-teacher-profile";
+//teacher-quiz
+@import "responsive/teacher-quiz";
+//teacher-quiz-question
+@import "responsive/teacher-quiz-question";
+//dashboard-payment
+@import "responsive/dashboard-payment";
+

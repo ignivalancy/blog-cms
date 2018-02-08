@@ -1,0 +1,977 @@
+.b-box {
+    @include padding(50 60);
+    background-color: $white;
+    @include border-round(10);
+    -webkit-box-shadow: 0 3px 18px rgba(0, 0, 0, .04);
+    -moz-box-shadow: 0 3px 18px rgba(0, 0, 0, .04);
+    box-shadow: 0 3px 18px rgba(0, 0, 0, .04);
+}
+
+.heading-ico {
+    text-align: center;
+    .title-ico {
+        width: 92px;
+        height: 92px;
+        text-align: center;
+        display: $block;
+        margin: 0 auto 20px;
+        @include border(2, solid, $s-color);
+        color: $s-color;
+        @include circle();
+        [class*="icon-"] {
+            line-height: 2.2;
+            @include fontsize(40);
+        }
+    }
+    .title {
+        @include fontsize(24);
+        @include hel-roman;
+        color: $s-color
+    }
+}
+
+.border-box {
+    @include border(1, solid, #d8d6d6);
+    @include border-round(5);
+}
+
+.form-box {
+    @include padding(50);
+    h3.title {
+        @include fontsize(25);
+        @include hel-roman;
+    }
+    .field-group {
+        @include margin-top(40);
+        & > .row {
+            @include margin(0 -35);
+            [class*="col-"] {
+                @include padding(0 35);
+            }
+        }
+    }
+}
+
+.d-f-field {
+    @include margin-bottom(60);
+    .d-field-control {
+        width: 100%;
+        background-color: transparent;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        @include border-bottom(1, solid, #dadada);
+        @include padding(0 0 30);
+        @include fontsize(20);
+        height: 62px;
+        color: #000;
+        outline: none !important;
+        &:focus {
+            border-color: #000;
+        }
+        &::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            color: #969494;
+            opacity: 1;
+        }
+        &::-moz-placeholder {
+            /* Firefox 19+ */
+            color: #969494;
+            opacity: 1;
+        }
+        &:-ms-input-placeholder {
+            /* IE 10+ */
+            color: #969494;
+            opacity: 1;
+        }
+        &:-moz-placeholder {
+            /* Firefox 18- */
+            color: #969494;
+            opacity: 1;
+        }
+    }
+    textarea.d-field-control {
+        @include border(1, solid, #dadada);
+        @include border-round(4);
+        @include padding(10);
+        min-height: 100px;
+        resize: none;
+    }
+    .input-group {
+        .d-field-control {
+            &:focus + .input-group-addon {
+                border-color: #000;
+            }
+        }
+        .input-group-addon {
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-radius: 0;
+            @include border-bottom(1, solid, #dadada);
+            @include padding(0 0 30);
+            background-color: transparent;
+            &.lg {
+                @include fontsize(20);
+            }
+        }
+    }
+    .select-control {
+        &:after {
+            color: #bdb9b9;
+            top: 0;
+            @include translatepos(0, 0);
+        }
+    }
+    &.is__mod {
+        @include margin-bottom(40);
+        .d-field-control {
+            @include padding(0 0 20);
+            height: 50px;
+        }
+        .input-group {
+            .input-group-addon {
+                @include padding(0 0 20);
+            }
+        }
+    }
+}
+
+.d-tabs {
+    & > li {
+        display: $inline;
+        @include margin-right(50);
+        &> a {
+            @include padding(10 20 10 40);
+            @include transition(all 0s);
+            display: $block;
+            color: $s-color;
+            background-color: $white;
+            height: 58px;
+            @include fontsize(22);
+            @include hel-roman;
+            @include pos(rel, null);
+            // @include opacity(0.8);
+            @include border-round(10 0 0 0);
+            &:after {
+                @include pos(ab, 0 -25px null null);
+                content: "";
+                width: 50px;
+                height: 58px;
+                background-color: $white;
+                @include transform(skewX(30deg));
+                @include border-round(10 10 0 10);
+                //display: none;
+                z-index: -1;
+            }
+            &:hover {
+                background-color: $s-color;
+                color: #d5b6ff;
+                @include opacity(1);
+                &:after {
+                    display: $block;
+                    background-color: $s-color;
+                }
+            }
+        }
+        &:last-child {
+            @include margin-right(0);
+        }
+        &.active {
+            & > a {
+                background-color: $s-color;
+                color: #d5b6ff;
+                @include opacity(1);
+                &:after {
+                    display: $block;
+                    background-color: $s-color;
+                }
+            }
+        }
+    }
+}
+
+.d-s-img {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.d-m-img {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+}
+
+.d-su-info {
+    .media-left {
+        @include padding-right(20);
+    }
+    .label-name {
+        @include hel-roman;
+        color: #313131;
+    }
+    p {
+        color: #313131;
+    }
+}
+
+.export-btn {
+    .export-ico {
+        @include margin-right(5);
+        vertical-align: middle;
+        @include fontsize(20);
+    }
+}
+
+.back-btn {
+    @include fontsize(22);
+    color: #128cdf;
+    @include hel-roman;
+    .fa {
+        @include margin-right(5);
+        @include fontsize(25);
+    }
+}
+
+.bread-crumb_block {
+    background-color: $white;
+    @include padding(30 40);
+    @include border-round(4);
+    .back-btn {
+        @include fontsize(25);
+        color: $color3;
+        @include hel-roman;
+        .fa {
+            @include margin-right(5);
+            @include fontsize(30);
+        }
+    }
+    h2.title {
+        @include fontsize(28);
+        @include hel-roman;
+        @include margin(10 0);
+    }
+    .bread-crumb__list {
+        @include border(1, solid, #c6c6c6);
+        @include border-round(3);
+        display: $inline;
+        @include padding(15 20 15 0);
+        @include margin-top(10);
+        ul {
+            li {
+                display: $inline;
+                @include padding(0 15);
+                @include pos(rel, null);
+                @include hel-roman;
+                color: #757373;
+                text-transform: capitalize;
+                @include fontsize(20);
+                &:after {
+                    @include pos(ab, 50% null null 100%);
+                    content: "\f105";
+                    @include translatepos(0, -50%);
+                    font-family: "FontAwesome";
+                    @include fontsize(18);
+                    color: #757373;
+                }
+                &.active {
+                    color: $s-color;
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.bread-crumb-s-list {
+    background-color: $white;
+    @include padding(15 0);
+    ul {
+        li {
+            display: $inline;
+            @include padding(0 15);
+            @include pos(rel, null);
+            @include hel-roman;
+            color: #757373;
+            text-transform: capitalize;
+            @include fontsize(18);
+            &:after {
+                @include pos(ab, 50% null null 100%);
+                content: "\f105";
+                @include translatepos(0, -50%);
+                font-family: "FontAwesome";
+                @include fontsize(18);
+                color: #757373;
+            }
+            &.active {
+                color: $s-color;
+                &:after {
+                    display: none;
+                }
+            }
+            &:last-child {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.ap-modal {
+    .modal-body {
+        @include padding(0);
+    }
+    .modal-content {
+        background-color: transparent;
+        //border-radius: 0;
+    }
+    .ap-modal-header {
+        background-color: #008ffa;
+        @include padding(30 55 30 40);
+        @include border-round(6 6 0 0);
+        @include pos(rel, null);
+        .m-title {
+            color: $white;
+            margin-bottom: 0;
+        }
+        .m-sub-title {
+            color: $white;
+        }
+        .ap-close {
+            @include pos(ab, 20px 15px null null);
+            border-color: $white;
+            color: $white;
+        }
+        & + .ap-modal-content {
+            @include border-round(0 0 6 6);
+        }
+    }
+    .ap-modal-content {
+        @include padding(30 40);
+        background-color: $white;
+        @include border-round(6);
+    }
+    .m-title {
+        @include fontsize(25);
+        color: $s-color;
+        @include hel-roman;
+        @include margin-bottom(10);
+    }
+    .m-sub-title {
+        @include fontsize(20);
+        color: $s-color;
+        @include margin-top(5);
+    }
+    .export-link {
+        @include fontsize(18);
+        @include hel-roman;
+    }
+    .ap-close {
+        @include pos(ab, 10px 10px null null);
+        width: 40px;
+        height: 40px;
+        line-height: 42px;
+        @include padding(0);
+        color: #404040;
+        @include border(2, solid, #404040);
+        @include circle();
+        @include fontsize(18);
+        background-color: transparent;
+    }
+    .student-dtl-info {
+        @include padding-top(20);
+        .student-quiz-dtl {
+            .media-left {
+                @include padding-right(30);
+            }
+            .s-img {
+                img {
+                    width: 125px;
+                    height: 125px;
+                    @include circle;
+                }
+            }
+            h3.name {
+                @include fontsize(28);
+                color: $s-color;
+                @include hel-roman;
+                @include margin-bottom(5);
+            }
+            h4 {
+                @include fontsize(25);
+                color: #5e5e5e;
+            }
+            .quiz-dtl-list {
+                @include margin-top(30);
+                .quiz-dtl-list__box {
+                    & > ul {
+                        & > li {
+                            @include fontsize(18);
+                            color: #7b7878;
+                            @include padding-bottom(10);
+                            display: table;
+                            width: 100%;
+                            & > span {
+                                display: table-cell;
+                                width: 50%;
+                                &.label-name {
+                                    @include hel-roman;
+                                    color: #484747;
+                                }
+                            }
+                        }
+                    }
+                    &.l__box {
+                        @include padding-right(20);
+                        @include border-right(1, solid, #c6c6c6);
+                    }
+                    &.r__box {
+                        @include padding-left(20);
+                    }
+                }
+            }
+        }
+        .data-list-block {
+            @include padding(40 0 0);
+        }
+    }
+    .add-bg-form {
+        @include padding(30 0);
+    }
+    &.school-list-modal {
+        .ap-modal-header {
+            @include border-round(15 15 0 0);
+        }
+        .ap-modal-content {
+            @include padding(0 0 15 0);
+            @include border-round( 0 0 15 15);
+        }
+        .school-listing {
+            & > ul {
+                & > li {
+                    @include padding(30 40);
+                    display: $block;
+                    @include fontsize(20);
+                    @include pos(rel, null);
+                    label {
+                        @include hel-roman;
+                        display: $block;
+                        color: #474747;
+                        cursor: pointer;
+                        margin: 0;
+                    }
+                    span.s-name {
+                        display: $block;
+                        @include padding-right(35);
+                    }
+                    .check-box {
+                        @include pos(ab, 50% 40px null null);
+                        @include translatepos(0%, -50%);
+                    }
+                    &:nth-child(odd) {
+                        background-color: #f5f5f5;
+                    }
+                    &:nth-child(even) {
+                        background-color: $white;
+                    }
+                }
+            }
+        }
+    }
+    .ap-qc-form,
+    .ap-qcedit-form {
+        .d-f-field {
+            .d-field-control {
+                color: #969494;
+            }
+        }
+    }
+    &.quizcopyModal,
+    &.editquizModal {
+        .ap-modal-content {
+            @include padding(50 70 80);
+        }
+    }
+    .quiz-created-msg {
+        @include padding(40 0);
+        h2 {
+            @include hel-roman;
+            @include fontsize(30);
+            color: $s-color;
+        }
+        h3 {
+            @include margin-top(5);
+            @include fontsize(25);
+        }
+    }
+    .copy-msg {
+        @include padding(60 0);
+        h2 {
+            @include hel-roman;
+            @include fontsize(25);
+            line-height: 1.3;
+        }
+    }
+    &.quizpreviewModal {
+        .ap-modal-content {
+            @include padding(50 60 70);
+        }
+    }
+}
+
+.c-checkbox {
+    .check-box {
+        width: 35px;
+        height: 35px;
+        @include circle();
+        @include border(1, solid, #cecfcf);
+        text-align: center;
+        color: $color3;
+        @include pos(rel, null);
+        &:before {
+            width: 20px;
+            height: 20px;
+            @include pos(ab, 50% null null 50%);
+            background-color: $color3;
+            content: "";
+            @include circle();
+            @include translatepos(-50%, -50%);
+            display: none;
+        }
+    }
+    [type="radio"] {
+        width: 0;
+        height: 0;
+        opacity: 0;
+        display: none;
+        &:checked {
+            & + .check-box {
+                &:before {
+                    display: $block;
+                }
+            }
+        }
+    }
+}
+
+.question-box {
+    //@include border-round(5);
+    @include margin-bottom(25);
+    @include border(1, solid, #d6d6d6);
+    @include fontsize(18);
+    @include hel-roman;
+    .question-box_inner {
+        @include padding(20);
+    }
+    .question-box-label {
+        @include padding-bottom(20);
+        color: $s-color;
+        display: table;
+        width: 100%;
+        @include fontsize(22);
+    }
+    .question-box-ans-list {
+        display: table;
+        width: 100%;
+        li {
+            @include padding-bottom(10);
+            float: left;
+            width: 50%;
+            .a-ico {
+                display: table-cell;
+                vertical-align: middle;
+                span {
+                    @include margin-right(15);
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    @include border(1, solid, #d6d6d6);
+                    @include border-round(4);
+                    display: $block;
+                    text-transform: uppercase;
+                }
+                &.an-right {
+                    span {
+                        background-color: #20c949;
+                        border-color: #20c949;
+                        color: $white;
+                        line-height: 1.6;
+                    }
+                }
+                &.an-wrong {
+                    span {
+                        background-color: #ec4447;
+                        border-color: #ec4447;
+                        color: $white;
+                        line-height: 1.6;
+                    }
+                }
+            }
+            .ans {
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+    }
+    .question-note {
+        @include padding(20 30);
+        background-color: #fbfbfb;
+        @include margin-top(30);
+        .title {
+            @include fontsize(20);
+            @include padding-bottom(10);
+        }
+        p {
+            @include fontsize(16);
+        }
+    }
+    .question-score {
+        display: table;
+        width: 100%;
+        @include padding-top(30);
+        .c-ans {
+            float: left;
+            background-color: #63bafb;
+            color: $white;
+            @include padding(10 30 10 10);
+            @include hel-roman;
+            @include border-round(6);
+        }
+        .total-score {
+            float: right;
+            @include padding(10 35);
+            color: #008ffa;
+            @include hel-roman;
+            @include border(2, solid, #008ffa);
+            @include border-round(6);
+        }
+    }
+}
+
+.question-preview-box {
+    @include fontsize(18);
+    @include hel-roman;
+    .question-label {
+        @include padding-bottom(20);
+        display: table;
+        width: 100%;
+        @include fontsize(20);
+    }
+    .question-ans-list {
+        & > ul {
+            & > li {
+                @include padding-bottom(20);
+                @include hel-light;
+            }
+        }
+    }
+    .question-p-note {
+        @include padding-top(30);
+        .title {
+            @include fontsize(20);
+            @include padding-bottom(10);
+        }
+        p {
+            @include fontsize(16);
+            @include hel-light;
+        }
+    }
+}
+
+.chart-block {
+    h2.title {
+        @include fontsize(30);
+        @include hel-roman;
+    }
+    .chart-block__box {
+        background-color: $white;
+        -webkit-box-shadow: 1px 5px 9px rgba(0, 0, 0, .02);
+        -moz-box-shadow: 1px 5px 9px rgba(0, 0, 0, .02);
+        box-shadow: 1px 5px 9px rgba(0, 0, 0, .02);
+        @include padding(30);
+        @include border-round(4);
+    }
+    .chart-container {
+        max-width: 700px;
+        position: relative;
+        @include margin-top(50);
+    }
+}
+
+.grade-box {
+    @include pos(rel, null);
+    .grade-box__header {
+        background-color: $color3;
+        @include padding(15 30);
+        @include border-round(2 2 0 0);
+        h3 {
+            color: $white;
+            @include hel-roman;
+            @include fontsize(24);
+            display: $inline;
+        }
+        span {
+            text-decoration: underline;
+            display: $inline;
+            float: right;
+            color: $white;
+            @include hel-roman;
+            @include fontsize(14);
+            @inclue margin-top(5);
+        }
+    }
+    .grade-box__body {
+        background-color: $white;
+        @include pos(rel, null);
+        .grade-box__body_inner {
+            @include padding(40 20);
+        }
+        .label-div {
+            line-height: 1.2;
+            min-height: 40px;
+        }
+        .g-btn {
+            color: #5d5b5b;
+            @include border(1, solid, #5d5b5b);
+            width: 18px;
+            height: 18px;
+            text-align: center;
+            line-height: 20px;
+            display: $inline;
+            float: right;
+            @include fontsize(10);
+            cursor: pointer;
+            &.active {
+                //pointer-events: none;
+                border-color: $color3;
+                color: $color3;
+            }
+        }
+        .panel {
+            border: 0;
+            border-radius: 0;
+            @include box-shadow-none;
+            margin-bottom: 0;
+        }
+        .grade-label {
+            text-align: center;
+            color: #4e4c4c;
+            display: $inline;
+            @include fontsize(16);
+            @include pos(rel, null);
+            @include hel-roman;
+            max-width: 150px;
+            line-height: 1.2;
+            span {
+                display: $block;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                color: #4e4c4c;
+            }
+            [class*="icon-"] {
+                vertical-align: middle;
+                display: $inline;
+                @include margin-right(3);
+                @include fontsize(20);
+                line-height: 1;
+                color: $color3;
+            }
+            &:before {
+                @include pos(ab, 50% 100% null null);
+                //@include translatepos(0, -50%);
+                width: 30px;
+                height: 1px;
+                background-color: #a5a5a5;
+                content: "";
+            }
+            &:after {
+                width: 8px;
+                height: 8px;
+                @include circle();
+                background-color: #a5a5a5;
+                @include pos(ab, 50% null null 0);
+                @include translatepos(0, -50%);
+                content: "";
+            }
+            &.main-label {
+                line-height: 1.2;
+                &:before {
+                    display: none;
+                }
+                &:after {
+                    display: none;
+                }
+            }
+        }
+        .root-label {
+            .root-main-label {
+                line-height: 1.2;
+                &:before {
+                    display: none;
+                }
+                &:after {
+                    display: none;
+                }
+            }
+        }
+        .root-list {
+            @include margin-left(10);
+            & > li {
+                & > .label-div {
+                    @include padding-top(15);
+                    @include padding-left(30);
+                    @include pos(rel, null);
+                    &:before {
+                        @include pos(ab, -12px null 0 0px);
+                        //@include translatepos(0, -50%);
+                        width: 1px;
+                        background-color: #a5a5a5;
+                        content: "";
+                    }
+                    .g-btn {
+                        color: $color3;
+                        border-color: $color3;
+                        &.collapsed {
+                            color: #5d5b5b;
+                            border-color: #5d5b5b;
+                            [class*="icon-"] {
+                                &:before {
+                                    content: "\42";
+                                }
+                            }
+                        }
+                        [class*="icon-"] {
+                            &:before {
+                                content: "\30";
+                            }
+                        }
+                    }
+                }
+                .grade-label {
+                    span {
+                        @include margin-left(20);
+                    }
+                }
+                &:last-child {
+                    & > .label-div {
+                        &:before {
+                            bottom: 16px;
+                        }
+                    }
+                }
+                &:last-child {
+                    .batch-list {
+                        &:before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .batch-list {
+                @include padding-left(60);
+                @include margin-left(0);
+                &:before {
+                    @include pos(ab, -1px null 0 0px);
+                    //@include translatepos(0, -50%);
+                    width: 1px;
+                    background-color: #a5a5a5;
+                    content: "";
+                }
+            }
+        }
+        .batch-list {
+            @include margin-left(10);
+            @include pos(rel, null);
+            //@include margin-top(30);
+            & > li {
+                @include pos(rel, null);
+                // overflow: hidden;
+                & > .label-div {
+                    @include padding-top(15);
+                    @include padding-left(30);
+                    @include pos(rel, null);
+                    &:before {
+                        @include pos(ab, -12px null 0 0px);
+                        //@include translatepos(0, -50%);
+                        width: 1px;
+                        background-color: #a5a5a5;
+                        content: "";
+                    }
+                }
+                &:last-child {
+                    & > .label-div {
+                        &:before {
+                            bottom: 15px;
+                        }
+                    }
+                    .child-list {
+                        &:before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .grade-label {
+                span {
+                    @include margin-left(20);
+                }
+            }
+        }
+        .child-list {
+            @include padding-left(33);
+            @include pos(rel, null);
+            & > li {
+                @include pos(rel, null);
+                & > .label-div {
+                    @include padding-top(15);
+                    @include padding-left(30);
+                    @include pos(rel, null);
+                    &:before {
+                        @include pos(ab, -12px null 0 0px);
+                        //@include translatepos(0, -50%);
+                        width: 1px;
+                        background-color: #a5a5a5;
+                        content: "";
+                    }
+                }
+                &:last-child {
+                    & > .label-div {
+                        &:before {
+                            bottom: 15px;
+                        }
+                    }
+                }
+                .grade-label {
+                    &:before {
+                        background-color: #a5a5a5;
+                    }
+                }
+                span {
+                    @include margin-left(15);
+                }
+            }
+            &:before {
+                @include pos(ab, -1px null 0 0px);
+                //@include translatepos(0, -50%);
+                width: 1px;
+                background-color: #a5a5a5;
+                content: "";
+            }
+        }
+    }
+}
+
+.d-footer-section {
+    @include padding(30 0);
+    background-color: $white;
+    @include border-top(1, solid, #cccccc);
+    .d-copy-txt {
+        @include fontsize(18);
+    }
+}

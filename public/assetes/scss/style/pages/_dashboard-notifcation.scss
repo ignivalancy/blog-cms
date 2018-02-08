@@ -1,0 +1,52 @@
+.notification-section {
+    @include padding(40 0);
+    .title {
+        @include fontsize(25);
+        color: $s-color;
+        @include hel-roman;
+        [class*="icon-"] {
+            @include margin-right(10);
+            @include fontsize(30);
+            vertical-align: middle;
+        }
+    }
+    .notification-section__inner {
+        background-color: $white;
+        @include border-round(4);
+        @include padding(40 60 80);
+    }
+}
+
+.nt-list {
+    @include margin-top(40);
+    .n-list__box {
+        @include padding(25 0);
+        @include border-bottom(1, solid, #e3e3e3);
+        .media-left {
+            @include padding-right(30);
+        }
+        .n-u-img {
+            width: 70px;
+            height: 70px;
+            img {
+                @include circle();
+            }
+        }
+        .n-list-txt {
+            color: #646464;
+            p {
+                @include fontsize(18);
+            }
+            .n-p-time {
+                @include fontsize(15);
+                display: $block;
+                @include margin-top(5);
+                color: #827f7f;
+                [class*="icon-"] {
+                    @include margin-right(5);
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}

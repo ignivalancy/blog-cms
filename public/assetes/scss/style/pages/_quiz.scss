@@ -1,0 +1,164 @@
+.quiz-section {
+    h2.title {
+        @include fontsize(25);
+        @include hel-roman;
+    }
+    .s-filter-block {
+        .s-filter-block__top {
+            background-color: $white;
+            @include padding(30);
+            @include border-round(4);
+        }
+        .filter-block {
+            @include margin-top(30);
+        }
+    }
+    .summary-block {
+        @include padding(50 70);
+        @include margin-top(30);
+        background-color: $white;
+        @include border-round(4);
+        .t-block {
+            @include padding(20 0 0 0);
+        }
+    }
+    .data-list-block {
+        @include padding(30 0);
+    }
+}
+
+.quiz-dtl-section {
+    .quiz-info {
+        .quiz-info-top {
+            @include margin-top(25);
+            background-color: $white;
+            @include border-round(4);
+            @include padding(30 40);
+            h3.title {
+                @include hel-roman;
+                @include fontsize(25);
+            }
+        }
+    }
+    .quiz-info-summary {
+        @include margin-top(25);
+        background-color: $white;
+        @include border-round(4);
+        @include padding(30 40);
+        h3.title {
+            @include hel-roman;
+            @include fontsize(25);
+        }
+        .quiz-dtl__list {
+            @include padding-top(20);
+            @include hel-roman;
+            ul {
+                li {
+                    @include fontsize(18);
+                    display: table;
+                    width: 100%;
+                    @include padding(15 0);
+                    @include border-bottom(1, solid, #cbcbcb);
+                    .quiz-dtl__list__cell {
+                        display: table-cell;
+                        width: 40%;
+                    }
+                    span.label-title {
+                        color: #545353;
+                        width: 60%;
+                    }
+                }
+            }
+        }
+    }
+    .data-list-block {
+        @include padding-top(30);
+    }
+}
+
+.quiz-response-section {
+    .student-dtl {
+        @include padding(30);
+        @include margin-top(30);
+        background-color: $white;
+        text-align: center;
+        .student-img {
+            @include padding-bottom(20);
+            img {
+                width: 100px;
+                height: 100px;
+                @include circle();
+            }
+        }
+        h2.name {
+            @include fontsize(24);
+            @include hel-roman;
+            @include margin-bottom(5);
+        }
+        h3 {
+            @include fontsize(20);
+        }
+        .student-score {
+            @include fontsize(20);
+            color: $s-color;
+            @include border(2, solid, $s-color);
+            @include border-round(6);
+            background-color: transparent;
+            @include padding(10 20);
+            text-align: center;
+            display: $inline;
+            @include margin-top(25);
+        }
+    }
+    .summary-block {
+        @include padding(50 70);
+        @include margin-top(30);
+        background-color: $white;
+        @include border-round(4);
+        @include fontsize(30);
+        @include hel-roman;
+        .t-block {
+            @include padding(20 0 0);
+        }
+        h2.title {
+            @include fontsize(25);
+            @include hel-roman;
+        }
+    }
+    .s-quiz-result-score {
+        @include padding(50 70 30);
+        background-color: $white;
+        @include border-round(4);
+        @include margin-top(30);
+        h2.title {
+            @include fontsize(25);
+            @include hel-roman;
+        }
+        .result__inner {
+            @include padding-top(40);
+        }
+        .question-box {
+            border-radius: 0;
+            @include fontsize(20);
+            .question-box_inner {
+                @include padding(30);
+            }
+            .question-box-ans-list {
+                @include hel-light;
+                li {
+                    width: 100%;
+                    float: none;
+                }
+            }
+            .question-note {
+                background-color: #f4f7f9;
+                @include margin-top(0);
+                p {
+                    @include hel-roman;
+                    @include fontsize(18);
+                    color: #535253;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@include media("<=767px") {
+    .form-section {
+        .field-form-box {
+            .field-group {
+                .forgot-link {
+                    float: left;
+                }
+            }
+        }
+    }
+}

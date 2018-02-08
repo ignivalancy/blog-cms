@@ -1,0 +1,443 @@
+    .t-quiz-question-block {
+        .t-quiz-question__top {
+            .bread-crumb_block {
+                @include padding(30);
+                .bread-crumb__list {
+                    @include margin-top(0);
+                }
+            }
+            .edit-quiz-btn
+            {
+                float: right;
+            }
+        }
+        .t-quiz-question__dtl {
+            @include margin-top(25);
+            & > .row {
+                @include margin(0 -10);
+                [class*="col-"] {
+                    @include padding(0 10);
+                }
+            }
+        }
+        .t-quiz-question__create {
+            .t-question__head {
+                @include padding(20);
+                display: table;
+                width: 100%;
+                background-color: #e6e6e6;
+                #titleinput {
+                    width: 450px;
+                    height: 50px;
+                    @include padding(10 10);
+                    @include border-round(6);
+                    background-color: $white;
+                    float: left;
+                    @include margin-right(30);
+                    @include fontsize(18);
+                    input {
+                        border: 0;
+                        width: 100%;
+                        outline: none;
+                        @inlcude border-round(6);
+                        outline: none;
+                        &::-webkit-input-placeholder {
+                            /* Chrome/Opera/Safari */
+                            color: #333333;
+                            opacity: 1;
+                        }
+                        &::-moz-placeholder {
+                            /* Firefox 19+ */
+                            color: #333333;
+                            opacity: 1;
+                        }
+                        &:-ms-input-placeholder {
+                            /* IE 10+ */
+                            color: #333333;
+                            opacity: 1;
+                        }
+                        &:-moz-placeholder {
+                            /* Firefox 18- */
+                            color: #333333;
+                            opacity: 1;
+                        }
+                    }
+                    .input-group-addon {
+                        border: 0;
+                        background-color: transparent;
+                        color: $color3;
+                        @include fontsize(20);
+                        @include padding(0);
+                        [class*="icon-"] {
+                            @include margin(0 15 0 10);
+                        }
+                    }
+                }
+                .time-label {
+                    @include fontsize(18);
+                    @include hel-roman;
+                    line-height: 50px;
+                }
+                #timelimt {
+                    width: 54px;
+                    height: 50px;
+                    @include border-round(6);
+                    background-color: $white;
+                    border: 0;
+                    text-align: center;
+                    @include fontsize(18);
+                    @include margin(0 10);
+                    &::-webkit-input-placeholder {
+                        /* Chrome/Opera/Safari */
+                        color: #333333;
+                        opacity: 1;
+                    }
+                    &::-moz-placeholder {
+                        /* Firefox 19+ */
+                        color: #333333;
+                        opacity: 1;
+                    }
+                    &:-ms-input-placeholder {
+                        /* IE 10+ */
+                        color: #333333;
+                        opacity: 1;
+                    }
+                    &:-moz-placeholder {
+                        /* Firefox 18- */
+                        color: #333333;
+                        opacity: 1;
+                    }
+                }
+                span.text {
+                    color: #747171;
+                    @include fontsize(18);
+                }
+            }
+            .t-question__area {
+                display: table;
+                width: 100%;
+                .t-question__list {
+                    display: table-cell;
+                    vertical-align: top;
+                    width: 230px;
+                    .t-question__list_wrap {
+                        background-color: #f1f0f0;
+                        @include padding-top(50);
+                        width: 100%;
+                        min-height: 600px;
+                        @include padding-left(20);
+                        @include padding-bottom(40);
+                    }
+                    .title {
+                        @include fontsize(18);
+                        @include margin-top(40);
+                        @include hel-roman;
+                    }
+                    .t-question-no {
+                        @include margin-top(20);
+                        @include pos(rel, null);
+                        li {
+                            @include fontsize(18);
+                            background-color: #f7f7f7;
+                            cursor: pointer;
+                            display: $block;
+                            @include hel-roman;
+                            @include padding(15 0 15 40);
+                            @include margin-bottom(5);
+                            @include border-left(4, solid, transparent);
+                            &.selected {
+                                border-color: $s-color;
+                            }
+                        }
+                    }
+                    .add-question {
+                        @include margin-top(25);
+                    }
+                    .add-question-btn {
+                        @include padding(5 10);
+                        background-color: $white;
+                        @include border(1, solid, #dddddd);
+                        color: $color3;
+                        @include fontsize(16);
+                        @include hel-roman;
+                    }
+                    .hint-note {
+                        background-color: $white;
+                        @include border(1, solid, #dddddd);
+                        @include padding(15 10);
+                        display: $block;
+                        @include margin-top(35);
+                        @include margin-right(10);
+                        @include fontsize(16);
+                        @include hel-roman;
+                        color: #686969;
+                    }
+                }
+                .t-question__area__content {
+                    width: 600px;
+                    display: table-cell;
+                    vertical-align: top;
+                    .t-content__head {
+                        background-color: #f1f0f0;
+                        @include padding-top(40);
+                        @include padding-left(30);
+                        @include padding-bottom(30);
+                        .t-qusetion-type {
+                            display: table;
+                            width: 100%;
+                        }
+                        .type-name {
+                            @include fontsize(18);
+                            @include hel-roman;
+                            line-height: 50px;
+                            float: left;
+                        }
+                        .select-control {
+                            @include border-round(6);
+                            background-color: $white;
+                            float: left;
+                            @include margin(0 30 0 15);
+                            @include fontsize(18);
+                            color: #626060;
+                            .typefield {
+                                height: 50px;
+                                @include padding(10 10);
+                                border: 0;
+                                width: 250px;
+                            }
+                            &:after {
+                                color: #a7a7a7;
+                                right: 10px;
+                                @include fontsize(18);
+                            }
+                        }
+                        .points-wrap {
+                            float: left;
+                            .point-label {
+                                @include fontsize(18);
+                                @include hel-roman;
+                                line-height: 50px;
+                                float: left;
+                            }
+                            #pointtype {
+                                width: 54px;
+                                height: 50px;
+                                @include border-round(6);
+                                background-color: $white;
+                                border: 0;
+                                text-align: center;
+                                @include fontsize(18);
+                                @include margin(0 10);
+                                outline: none;
+                                &::-webkit-input-placeholder {
+                                    /* Chrome/Opera/Safari */
+                                    color: #333333;
+                                    opacity: 1;
+                                }
+                                &::-moz-placeholder {
+                                    /* Firefox 19+ */
+                                    color: #333333;
+                                    opacity: 1;
+                                }
+                                &:-ms-input-placeholder {
+                                    /* IE 10+ */
+                                    color: #333333;
+                                    opacity: 1;
+                                }
+                                &:-moz-placeholder {
+                                    /* Firefox 18- */
+                                    color: #333333;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                    .t-question-info-block {
+                        background-color: $white;
+                        @include padding(30 35);
+                        display: none;
+                        &.active-question {
+                            display: block;
+                        }
+                        .question-label {
+                            @include fontsize(18);
+                            @include hel-roman;
+                            @include padding-bottom(10);
+                            display: $block;
+                        }
+                        .question-title-input {
+                            width: 100%;
+                            resize: none;
+                            height: 100px;
+                            @include border(1, solid, #dddddd);
+                            &.err {
+                                border-color: #f8554f;
+                            }
+                        }
+                        .t-question-attachItem {
+                            @include margin-top(15);
+                            color: #8d8d8d;
+                            .attach-label {
+                                @include fontsize(18);
+                                @include hel-roman;
+                                vertical-align: middle;
+                                display: $inline;
+                            }
+                            .link-icon {
+                                width: 32px;
+                                height: 32px;
+                                @include border(1, solid, #dddddd);
+                                text-align: center;
+                                @include border-round(6);
+                                color: #8d8d8d;
+                                display: $inline;
+                                vertical-align: middle;
+                                line-height: 32px;
+                                @include margin-left(10);
+                            }
+                            .library-icon {
+                                width: 32px;
+                                height: 32px;
+                                @include border(1, solid, #dddddd);
+                                text-align: center;
+                                @include border-round(6);
+                                color: #8d8d8d;
+                                display: $inline;
+                                line-height: 32px;
+                                @include margin-left(10);
+                            }
+                        }
+                        .t-answer-response {
+                            @include padding-top(40);
+                            .title {
+                                @include fontsize(18);
+                                @include hel-roman;
+                                @include padding-bottom(20);
+                            }
+                            .t-answer-wrap {
+                                display: table;
+                                width: 100%;
+                                @include pos(rel, null);
+                                @include margin-bottom(50);
+                                .t-answer-label {
+                                    display: table-cell;
+                                    width: 60px;
+                                    vertical-align: top;
+                                    span {
+                                        width: 60px;
+                                        display: block;
+                                        height: 70px;
+                                        text-align: center;
+                                        @include fontsize(30);
+                                        @include hel-roman;
+                                        background-color: #c7c7c7;
+                                        color: $white;
+                                        line-height: 70px;
+                                        @include margin-right(10);
+                                    }
+                                }
+                                .t-answer-input {
+                                    .response-input {
+                                        resize: none;
+                                        width: 100%;
+                                        @include border(8, solid, #c7c7c7);
+                                        @includ padding(4);
+                                        height: 150px;
+                                        outline: none;
+                                    }
+                                }
+                                .t-option-wrap {
+                                    text-align: right;
+                                    @include pos(ab, null 0 null null);
+                                    @include margin-top(5);
+                                    .st-answer {
+                                        display: $inline;
+                                        color: $color3;
+                                        text-decoration: underline;
+                                        @include fontsize(17);
+                                    }
+                                    .cr-answer {
+                                        @include fontsize(17);
+                                        background-color: #20c948;
+                                        color: $white;
+                                        display: $inline;
+                                        @include padding(8 20);
+                                        @include hel-roman;
+                                    }
+                                }
+                                &:last-of-type {
+                                    @include margin-bottom(0);
+                                }
+                                &.crr-ans {
+                                    .t-answer-label {
+                                        span {
+                                            background-color: #20c948;
+                                        }
+                                    }
+                                    .t-answer-input {
+                                        .response-input {
+                                            border-color: #20c948;
+                                        }
+                                    }
+                                }
+                            }
+                            .t-tf-wrap {
+                                .label-name {
+                                    @include fontsize(18);
+                                    @include hel-roman;
+                                    color: #20c948;
+                                    display: $inline;
+                                    vertical-align: middle;
+                                }
+                                .select-control {
+                                    @include border-round(4);
+                                    @include border(1, solid, #b2b1b1);
+                                    @include margin(0 0 0 20);
+                                    @include fontsize(18);
+                                    display: $inline;
+                                    vertical-align: middle;
+                                    color: #626060;
+                                    select {
+                                        width: 200px;
+                                        height: 50px;
+                                        border: 0;
+                                        @include padding-left(10);
+                                        @include hel-roman;
+                                    }
+                                    &:after {
+                                        color: #a7a7a7;
+                                        right: 10px;
+                                        @include fontsize(18);
+                                    }
+                                }
+                            }
+                        }
+                        .t-question-explain-input {
+                            @include margin-top(50);
+                            .explain-label {
+                                @include fontsize(18);
+                                @include hel-roman;
+                                @include padding-bottom(10);
+                                display: $block;
+                            }
+                            .explain-title-input {
+                                width: 100%;
+                                resize: none;
+                                height: 100px;
+                                @include border(1, solid, #dddddd);
+                                @inlcude border-round(6);
+                                outline: none;
+                                &.err {
+                                    border-color: #f8554f;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .t-assgin-quiz {
+            background-color: $white;
+            @include padding(30);
+        }
+    }

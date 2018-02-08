@@ -1,0 +1,32 @@
+@include media("<=767px") {
+    .tq-section {
+        .tq__heading__block {
+            .text-right {
+                text-align: left !important;
+            }
+            .c-q-btn {
+                margin-top: 10px;
+            }
+        }
+    }
+    .tq-section {
+        .st-add-block {
+            .st-add-form {
+                .new-btn {
+                    height: auto;
+                    width: 100%;
+                    display: block;
+                    line-height: 1.4;
+                    padding: 10px 20px !important;
+                }
+                .prev-btn {
+                    height: auto;
+                    width: 100%;
+                    display: block;
+                    line-height: 1.4;
+                    padding: 10px 20px !important;
+                }
+            }
+        }
+    }
+}

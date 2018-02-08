@@ -1,0 +1,15 @@
+@include media("<=992px") {
+    .payment-block {
+        .payment-form {
+            @include margin-top(30);
+            .payment-form__option {
+                .payment-form__option__box {
+                    @include margin-bottom(15);
+                }
+            }
+            .field-group {
+                @include margin-top(30);
+            }
+        }
+    }
+}

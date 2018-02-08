@@ -1,0 +1,65 @@
+.form-section {
+    @include experimental-value(min-height, 100%);
+    @include pos(rel, null);
+    background-image: url(#{$imgpath}banner-slide.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    .login-form-section {
+        @include padding(80 0);
+    }
+    .field-form-box {
+        max-width: 600px;
+        width: 100%;
+        margin: 0 auto;
+        color: $white;
+        @include fontsize(18);
+        .heading {
+            text-align: center;
+            .title {
+                @include fontsize(40);
+                color: $white;
+                & > span {
+                    color: $themecolor;
+                }
+            }
+            .sub-title {
+                color: $white;
+                @include fontsize(20);
+                @include margin-top(10);
+            }
+        }
+        .f-heading {
+            @include hel-roman;
+            @include fontsize(25);
+            color: $white;
+            @include padding-bottom(15);
+            @include margin-top(15);
+        }
+        .f-student-info {
+            & > ul {
+                display: table;
+                width: 100%;
+                @include margin(20 0);
+                &> li {
+                    float: left;
+                    width: 50%;
+                    @include fontsize(20);
+                    @include padding-bottom(25);
+                }
+            }
+        }
+        .field-group {
+            @include margin-top(40);
+            .forgot-link {
+                color: $white;
+                float: right;
+            }
+            .f-field {
+                &.l-pass-field {
+                    @include margin-bottom(25);
+                }
+            }
+        }
+    }
+}

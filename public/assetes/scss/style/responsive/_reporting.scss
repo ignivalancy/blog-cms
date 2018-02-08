@@ -1,0 +1,171 @@
+@include media("<=1400px") {
+    .reporting-dtl-section {
+        .r-ifnoblock {
+            @include padding(40 70 40);
+        }
+        .summary-block {
+            .t-block {
+                .t-block__box {
+                    @include padding(30 20);
+                    h4 {
+                        @include fontsize(22);
+                    }
+                }
+            }
+        }
+    }
+    .teacher-section {
+        .summary-block {
+            .t-block {
+                .t-block__box {
+                    @include padding(30 20);
+                    h4 {
+                        @include fontsize(22);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media("<=1200px") {
+    .reporting-dtl-section {
+        .r-ifnoblock {
+            @include padding(40 50 40);
+        }
+        .summary-block {
+            @include padding(20);
+        }
+    }
+    .teacher-section {
+        .summary-block {
+            @include padding(20);
+        }
+    }
+}
+
+@include media("<=1200px") {
+    .reporting-dtl-section {
+        .r-ifnoblock {
+            .r-ifnoblock__dtl {
+                .r-ifnoblock__info_list {
+                    @include fontsize(16);
+                    ul {
+                        & > li {
+                            & > .media {
+                                .media-left {
+                                    @include padding-right(20);
+                                }
+                                & > .media-body {
+                                    p {
+                                        @include fontsize(20);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media("<=992px") {
+    .reporting-dtl-section {
+        .r-ifnoblock {
+            .r-ifnoblock__dtl {
+                .r-ifnoblock__info_list {
+                    @include fontsize(16);
+                    ul {
+                        & > li {
+                            @include padding-bottom(20);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media("<=767px") {
+    .teacher-section {
+        .t-filter-block {
+            .text-right {
+                text-align: left;
+            }
+            h2.title {
+                @include padding-left(0);
+            }
+            .total {
+                @include margin-top(10);
+                @include padding-right(0);
+            }
+        }
+    }
+    .reporting-section {
+        .r-top__dtl {
+            @include padding(20);
+            .text-right {
+                text-align: left!important;
+            }
+            .add-s-btn {
+                @include margin-top(10);
+            }
+        }
+    }
+    .reporting-dtl-section {
+        .r-ifnoblock {
+            @include padding(20 15);
+        }
+        .r-ifnoblock__top {
+            .back-btn {
+                @include pos(rel, 0 null null 0);
+            }
+        }
+    }
+}
+
+@include media("<=500px") {
+    .reporting-dtl-section {
+        .r-ifnoblock {
+            .r-ifnoblock__dtl {
+                .button {
+                    height: auto;
+                    width: 100%;
+                    display: $block;
+                    line-height: 1.4;
+                    padding: 10px 20px !important;
+                    @include margin(0 0 10 0);
+                }
+            }
+        }
+    }
+}
+
+@include media("<=479px") {
+    .reporting-dtl-section {
+        .r-ifnoblock {
+            .r-ifnoblock__dtl {
+                .r-ifnoblock__info_list {
+                    @include fontsize(16);
+                    ul {
+                        & > li {
+                            text-align: center;
+                            & > .media {
+                                .media-left,
+                                .media-right,
+                                .media-body {
+                                    display: block;
+                                    width: auto;
+                                }
+                                .media-left {
+                                    @include padding-right(0);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

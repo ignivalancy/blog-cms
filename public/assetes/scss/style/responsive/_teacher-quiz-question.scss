@@ -1,0 +1,88 @@
+@include media("<=1200px") {
+    .t-quiz-question-block {
+        .t-quiz-question__create {
+            .t-question__head {
+                #titleinput {
+                    width: 300px;
+                }
+            }
+            .t-question__area {
+                .t-question__area__content {
+                    .t-content__head {
+                        @include padding-left(10);
+                        @include padding-right(10);
+                    }
+                    .t-content__head .select-control {
+                        .typefield {
+                            width: 200px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media("<=992px") {
+    .t-quiz-question-block {
+        .t-assgin-quiz {
+            @include margin-top(20);
+        }
+    }
+}
+
+@include media("<=767px") {
+    .t-quiz-question-block {
+        .t-quiz-question__top {
+            .edit-quiz-btn {
+                float: none;
+                margin-top: 10px;
+            }
+        }
+        .t-quiz-question__create {
+            .t-question__head {
+                #titleinput {
+                    width: 100%;
+                    @include margin(0 0 10 0);
+                }
+            }
+            .t-question__area {
+                .t-question__list {
+                    display: $block;
+                    width: 100%;
+                    .t-question__list_wrap {
+                        @include padding(20 0 20 20);
+                        min-height: inherit;
+                    }
+                    .title {
+                        @include margin-top(0);
+                    }
+                }
+                .t-question__area__content {
+                    display: $block;
+                    width: 100%;
+                    .t-question-info-block {
+                        @include padding(20 10);
+                        .t-answer-response {
+                            .t-answer-wrap {
+                                .t-option-wrap {
+                                    @include pos(rel, 0 0 0 0);
+                                }
+                            }
+                        }
+                    }
+                    .t-content__head {
+                        .type-name {
+                            display: $block;
+                            width: 100%;
+                        }
+                        .select-control {
+                            width: 100%;
+                            @include margin(0 0 10 0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

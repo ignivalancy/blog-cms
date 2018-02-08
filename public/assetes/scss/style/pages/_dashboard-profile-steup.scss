@@ -1,0 +1,309 @@
+    .s-profile-section {
+        @include padding-top(20);
+        h2.title {
+            text-align: center;
+            @include fontsize(30);
+            @include hel-roman;
+            @include padding-bottom(20);
+        }
+        h3.sub-title {
+            @include fontsize(20);
+            text-align: center;
+        }
+        .s-profile__inner {
+            @include padding(60 70 40);
+            background-color: $white;
+        }
+    }
+    
+    .s-profile-section {
+        .wizard-block {
+            @include padding-top(30);
+        }
+    }
+    
+    .wizard-block {
+        .wizard-tabs {
+            @include margin-top(50);
+            @include margin-bottom(50);
+            & > ul {
+                display: table;
+                width: 100%;
+                & > li {
+                    float: left;
+                    width: 33.33%;
+                    text-align: center;
+                    @include pos(rel, null);
+                    z-index: 1;
+                    .wizard-ico {
+                        width: 72px;
+                        height: 72px;
+                        margin: 0 auto 10px;
+                        @include circle();
+                        text-align: center;
+                        display: $block;
+                        background-color: $white;
+                        @include border(1, solid, #818181);
+                        @include pos(rel, null);
+                        span {
+                            width: 56px;
+                            height: 56px;
+                            @include circle();
+                            background-color: #6931d2;
+                            color: $white;
+                            line-height: 56px;
+                            @include hel-medium;
+                            @include fontsize(30);
+                            text-align: center;
+                            display: $block;
+                            @include pos(ab, 50% null null 50%);
+                            @include translatepos(-50%, -50%);
+                        }
+                        span.check-ico {
+                            line-height: 2;
+                        }
+                    }
+                    .step-name {
+                        @include fontsize(18);
+                        color: #6931d2;
+                        @include hel-medium;
+                    }
+                    &:after {
+                        @include pos(ab, 35px null null 50%);
+                        content: "";
+                        width: 100%;
+                        height: 8px;
+                        background-color: #e6e6e6;
+                        z-index: -1;
+                    }
+                    &:last-child {
+                        &:after {
+                            display: none;
+                        }
+                    }
+                    &.checked {
+                        .wizard-ico {
+                            span {
+                                background-color: $color2;
+                            }
+                        }
+                        &:before {
+                            background-color: $color2;
+                        }
+                        &:after {
+                            background-color: $color2;
+                        }
+                    }
+                }
+            }
+        }
+        .wizard-content {
+            .wizard-content-box {
+                @include padding(50 50 50);
+                @include border(1, solid, #d8d6d6);
+                @include border-round(5);
+                h2.title {
+                    @include fontsize(30);
+                    @include hel-roman;
+                }
+                .wizard-form {
+                    .field-group {
+                        @include margin-top(40);
+                        & > .row {
+                            @include margin(0 -35);
+                            [class*="col-"] {
+                                @include padding(0 35);
+                            }
+                        }
+                    }
+                    .step-pannel-one {
+                        .upload-box {
+                            width: 200px;
+                            margin: 0 auto 20px;
+                            text-align: center;
+                            img {
+                                @include margin-bottom(15);
+                            }
+                            h3 {
+                                @include fontsize(25);
+                                color: #4e4c4c;
+                            }
+                        }
+                        .q-ico {
+                            color: #128cdf;
+                            cursor: pointer;
+                            @include fontsize(22);
+                        }
+                        .tooltip {
+                            & > .tooltip-inner {
+                                @include border(1, solid, #7d7d7d);
+                            }
+                        }
+                    }
+                }
+                .step-pannel-three {
+                    @include padding(70 0 0);
+                }
+            }
+        }
+        .wizard-bottom {
+            @include margin-top(40);
+        }
+    }
+    
+    .price-table-block {
+        & > .row {
+            @include margin(0 -12);
+            [class*="col-"] {
+                @include padding(0 6);
+            }
+        }
+        .price-table__box {
+            @include padding(40 20);
+            text-align: center;
+            -webkit-box-shadow: 1px 5px 5px rgba(0, 0, 0, .35);
+            -moz-box-shadow: 1px 5px 5px rgba(0, 0, 0, .35);
+            box-shadow: 1px 5px 5px rgba(0, 0, 0, .35);
+            @include pos(rel, null);
+            color: $white;
+            &.silver {
+                background-color: #2b90f6;
+                .divider {
+                    background-color: #69befd;
+                }
+                .price-btn {
+                    &:hover {
+                        background-color: darken(#2b90f6, 10%);
+                    }
+                }
+                .price-ico {
+                    @include margin-top(20);
+                }
+            }
+            &.gold {
+                background-color: #f96262;
+                .divider {
+                    background-color: #ff7f7f;
+                }
+                .price-table__txt {
+                    @include margin-top(40);
+                }
+                .price-btn {
+                    background-color: $white;
+                    color: #f96262;
+                    &:hover {
+                        background-color: darken($white, 10%);
+                    }
+                }
+                .price-ico {
+                    @include margin-top(25);
+                }
+            }
+            &.premium {
+                background-color: #985ce9;
+                .divider {
+                    background-color: #b362fa;
+                }
+                .price-table__txt {
+                    @include margin-top(50);
+                }
+                .price-ico {
+                    @include margin-top(48);
+                }
+                .price-btn {
+                    &:hover {
+                        background-color: darken(#985ce9, 10%);
+                    }
+                }
+            }
+            &.contact-plan {
+                background-color: #00b3fe;
+                .c-plan-ico {
+                    @include fontsize(45);
+                    @include padding-bottom(40);
+                }
+                .price-table__txt {
+                    @include margin-top(100);
+                }
+                h3.title {
+                    @include fontsize(25);
+                    @include padding-bottom(0);
+                    &:after {
+                        display: none;
+                    }
+                }
+                .price-table__bottom {
+                    @include margin-top(105);
+                }
+            }
+            h3.title {
+                @include fontsize(20);
+                text-align: center;
+                color: $white;
+                @include hel-roman;
+                @include pos(rel, null);
+                @include padding-bottom(30);
+                &:after {
+                    @include pos(ab, 100% null null 50%);
+                    content: "";
+                    width: 55px;
+                    height: 5px;
+                    background-color: $white;
+                    @include translatepos(-50%, 0%);
+                }
+            }
+            .main-title {
+                text-align: center;
+                color: $white;
+                text-transform: uppercase;
+                @include fontsize(35);
+                @include padding(40 0);
+                @include hel-medium;
+            }
+            .divider {
+                display: $block;
+                width: 100%;
+                height: 1px;
+            }
+            .price-table__txt {
+                @include margin-top(25);
+                h4 {
+                    @include fontsize(25);
+                    color: $white;
+                    @include hel-roman;
+                    @include margin-bottom(5);
+                }
+                p {
+                    @include fontsize(16);
+                    color: $white;
+                }
+            }
+            .price-table__bottom {
+                @include margin-top(25);
+            }
+            .price-btn {
+                @include fontsize(20);
+                @include hel-medium;
+                color: $white;
+                @include border(2, solid, $white);
+                @include border-round(10);
+                height: 50px;
+                line-height: 45px;
+                text-align: center;
+                display: $inline;
+                background-color: transparent;
+                @include padding(0 30);
+            }
+            .price-ico {
+                display: $block;
+                @include margin-top(20);
+                @include fontsize(25);
+            }
+            .tooltip {
+                opacity: 1;
+                .tooltip-arrow {
+                    border-top-color: $white;
+                }
+            }
+        }
+    }

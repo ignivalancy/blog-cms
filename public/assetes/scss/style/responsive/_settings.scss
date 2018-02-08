@@ -1,0 +1,288 @@
+    @include media(">=1000px") {
+        .setting-section {
+            .setting-grade__container {
+                .setting-grade__list__container {
+                    & > .row {
+                        [class*="col-"] {
+                            &:nth-child(3n) {
+                                clear: right;
+                            }
+                            &:nth-child(3n+1) {
+                                clear: left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @include media("<=1400px") {
+        .setting-section {
+            .setting-grade__container {
+                .setting-grade__top__filter {
+                    .select-control {
+                        width: 300px;
+                    }
+                }
+                .grade-box {
+                    .grade-box__body {
+                        .grade-box__body_inner {
+                            @include padding(30);
+                        }
+                    }
+                }
+            }
+        }
+        .setting-bg-section {
+            .grade-box {
+                .grade-box__body {
+                    .grade-box__body_inner {
+                        @include padding(30);
+                    }
+                }
+            }
+        }
+    }
+    
+    @include media("<=1200px") {
+        .setting-section {
+            .setting-grade__container {
+                .setting-grade__list__container {
+                    & > .row {
+                        @include margin(0 -15);
+                        [class*="col-"] {
+                            @include padding(0 15);
+                        }
+                    }
+                }
+            }
+        }
+        .setting-section {
+            .st-dtl-block__section {
+                .st-dtl-block {
+                    .st-dtl-block__info-list__block {
+                        .st-dtl-block__info-list {
+                            @include fontsize(16);
+                            ul {
+                                & > li {
+                                    & > .media {
+                                        .media-left {
+                                            @include padding-right(20);
+                                        }
+                                        & > .media-body {
+                                            p {
+                                                @include fontsize(20);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @include media("<=992px") {
+        .setting-section {
+            .st-dtl-block__section {
+                .st-dtl-block {
+                    .st-dtl-block__info-list__block {
+                        .st-dtl-block__info-list {
+                            ul {
+                                & > li {
+                                    @include padding-bottom(20);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @include media("<=767px") {
+        .setting-section {
+            .setting-grade__container {
+                .setting-grade__top {
+                    @include padding(30 0);
+                    text-align: center;
+                }
+                .setting-grade__top__filter {
+                    .form-group {
+                        display: $block;
+                        @include margin-bottom(10);
+                        text-align: center;
+                        padding: 0 10px !important;
+                    }
+                    .select-control {
+                        width: 100%;
+                        margin: 0 auto;
+                    }
+                }
+                .grade-box {
+                    .grade-box__body {
+                        .grade-box__body_inner {
+                            @include padding(20);
+                        }
+                    }
+                }
+            }
+        }
+        .setting-bg-section {
+            .setting-bg__top {
+                .title {
+                    @include margin-bottom(10);
+                }
+                .text-right {
+                    text-align: left !important;
+                }
+            }
+            .grade-box {
+                .grade-box__body {
+                    .grade-box__body_inner {
+                        @include padding(20);
+                    }
+                }
+            }
+        }
+        .setting-section {
+            .setting-bg-section {
+                .setting-bg__top__info {
+                    text-align: center;
+                    .form-group {
+                        display: $block;
+                    }
+                    .select-control {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .setting-section {
+            .st-section {
+                .st__top {
+                    .text-right {
+                        text-align: left !important;
+                    }
+                    span.total {
+                        @include margin-top(5);
+                    }
+                }
+            }
+        }
+        .st-add-block {
+            .st-add-form__heading {
+                .back-btn {
+                    @include pos(rel, 0 null null 0);
+                }
+            }
+            .st-add-form {
+                @include padding(30 20);
+                .st-add-form__field-group {
+                    .bootstrap-tagsinput input {
+                        @include fontsize(16);
+                    }
+                    .d-f-field {
+                        .q-ico {
+                            @include fontsize(16);
+                        }
+                    }
+                }
+            }
+        }
+        .setting-section {
+            .st-dtl-block__section {
+                .st-dtl-block__heading {
+                    .back-btn {
+                        @include pos(rel, 0 null null 0);
+                    }
+                }
+                .st-dtl-block {
+                    @include padding(20);
+                    [class*="padding-"] {
+                        @include padding(0);
+                    }
+                }
+            }
+        }
+        .setting-prev-section {
+            .setting-grade__list__container {
+                .setting-grade__list__heading {
+                    .text-right {
+                        text-align: left !important;
+                    }
+                    .cp-btn {
+                        @include margin-top(10);
+                    }
+                }
+            }
+            .setting-prev__top-info {
+                text-align: center;
+                .form-group {
+                    display: $block;
+                }
+                .select-control {
+                    width: 100%;
+                }
+            }
+            .setting-prev__heading {
+                .back-btn {
+                    @include pos(rel, 0 null null 0);
+                }
+            }
+        }
+    }
+    
+    @include media("<=500px") {
+        .setting-section {
+            .setting-grade__container {
+                .setting-grade__top {
+                    .button {
+                        height: auto;
+                        width: 100%;
+                        display: $block;
+                        line-height: 1.4;
+                        padding: 10px 20px !important;
+                        @include margin-bottom(10);
+                    }
+                }
+            }
+        }
+    }
+    
+    @include media("<=479px") {
+        .setting-section {
+            .st-dtl-block__section {
+                .st-dtl-block {
+                    .st-dtl-block__info-list__block {
+                        .st-dtl-block__info-list {
+                            ul {
+                                & > li {
+                                    text-align: center;
+                                    & > .media {
+                                        .media-left,
+                                        .media-right,
+                                        .media-body {
+                                            display: block;
+                                            width: auto;
+                                        }
+                                        .media-left {
+                                            @include padding-right(0);
+                                        }
+                                        & > .media-body {
+                                            p {
+                                                @include fontsize(16);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }

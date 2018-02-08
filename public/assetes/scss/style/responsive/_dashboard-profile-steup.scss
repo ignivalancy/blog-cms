@@ -1,0 +1,90 @@
+    @include media(">=1200px", "<=1400px") {
+        .price-table-block {
+            .price-table__box {
+                &.premium {
+                    .price-table__txt {
+                        @include margin-top(78);
+                    }
+                }
+                &.contact-plan {
+                    .price-table__txt {
+                        @include margin-top(134);
+                    }
+                    .price-table__bottom {
+                        @include margin-top(125);
+                    }
+                }
+            }
+        }
+    }
+    
+    @include media("<=1200px") {
+        .wizard-block {
+            .wizard-content {
+                .wizard-content-box {
+                    .step-pannel-three {
+                        @include padding(100 0 0 0);
+                    }
+                }
+            }
+        }
+        .price-table-block {
+            .price-table__box {
+                @include padding(40 20);
+            }
+        }
+        .s-profile-section {
+            .s-profile__inner {
+                @include padding(50 50 30);
+            }
+        }
+        .price-table-block {
+            .price-table__box {
+                @include margin-bottom(20);
+                &.silver {
+                    .price-table__txt {
+                        @include margin-top(53);
+                    }
+                }
+            }
+        }
+    }
+    
+    @include media("<=992px") {
+        .price-table-block {
+            .price-table__box {
+                @include margin-bottom(20);
+            }
+        }
+        .wizard-block {
+            .wizard-content {
+                .wizard-content-box {
+                    .step-pannel-three {
+                        @include padding(50 0 0 0);
+                    }
+                }
+            }
+        }
+        .edit-profile-section {
+            .edit-price-block {
+                .price-table-block {
+                    @include padding(50 0 0 0);
+                }
+            }
+        }
+    
+    }
+    
+    @include media("<=767px") {
+        .s-profile-section {
+            .s-profile__inner {
+                @include padding(30 20);
+            }
+        }
+        .c-form-section {
+            @include padding(0);
+            .c-form-box {
+                @include padding(30 20);
+            }
+        }
+    }

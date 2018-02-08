@@ -1,0 +1,268 @@
+@include media(">=1000px") {
+    .modal {
+        text-align: center;
+        padding: 0 !important;
+    }
+    .modal:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -4px;
+    }
+    .modal-dialog {
+        display: inline-block;
+        text-align: left;
+        vertical-align: middle;
+    }
+    .m-bottom-zero {
+        @include margin-bottom(0);
+    }
+}
+
+@include media(">=1200px") {
+    .ap-modal {
+        .modal-lg {
+            width: 1100px;
+        }
+    }
+}
+
+@include media("<=1400px") {
+    .t-block {
+        &.is__mod__c {
+            & > .row {
+                @include margin(0 -30);
+                [class*="col-"] {
+                    @include padding(0 30);
+                }
+            }
+        }
+    }
+}
+
+@include media("<=1200px") {
+    .ap-modal {
+        .student-dtl-info {
+            .student-quiz-dtl {
+                .quiz-dtl-list {
+                    .quiz-dtl-list__box {
+                        &> ul {
+                            &>li {
+                                @include fontsize(17);
+                            }
+                        }
+                        &.r__box {
+                            @include padding(0);
+                        }
+                        &.l__box {
+                            @include padding(0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .t-block {
+        & > .row {
+            @include margin(0 -20);
+            [class*="col-"] {
+                @include padding(0 20);
+            }
+        }
+        &.is__mod__c {
+            & > .row {
+                @include margin(0 -20);
+                [class*="col-"] {
+                    @include padding(0 20);
+                }
+            }
+        }
+    }
+    .grade-box {
+        .grade-box__header {
+            @include padding(15);
+        }
+    }
+}
+
+@include media("<=767px") {
+    .b-box {
+        @include padding(20 30);
+    }
+    .form-box {
+        @include padding(30 30 20);
+    }
+    .d-f-field {
+        .d-field-control {
+            @include fontsize(16);
+        }
+    }
+    .d-tabs {
+        & > li {
+            margin-right: 0;
+            & > a {
+                @include padding(10 15);
+                height: auto;
+                border-radius: 4px 4px 0 0;
+                @include fontsize(18);
+                &:after {
+                    display: none !important;
+                }
+            }
+        }
+    }
+    .wizard-block {
+        .wizard-content {
+            .wizard-content-box {
+                @include padding(30 20 20);
+                .wizard-form {
+                    .step-pannel-one {
+                        .q-ico {
+                            @include fontsize(16);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .ap-modal {
+        .ap-modal-content {
+            @include padding(20);
+        }
+    }
+    .ap-modal {
+        .student-dtl-info {
+            .student-quiz-dtl {
+                text-align: center;
+                .quiz-dtl-list {
+                    .quiz-dtl-list__box {
+                        &> ul {
+                            &>li {
+                                & > span {
+                                    display: block;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+                .media-left,
+                .media-right,
+                .media-body {
+                    display: block;
+                    width: auto;
+                }
+                .s-img {
+                    @include margin-bottom(10);
+                }
+                .media-left {
+                    @include padding(0);
+                }
+            }
+        }
+        &.school-list-modal {
+            .school-listing {
+                & > ul {
+                    & > li {
+                        @include padding(20);
+                        .check-box {
+                            right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        &.quizcopyModal,
+        &.editquizModal {
+            .ap-modal-content {
+                @include padding(20 20 60);
+            }
+        }
+        &.quizpreviewModal {
+            .ap-modal-content {
+                @include padding(20 20 50);
+            }
+        }
+    }
+    .bread-crumb_block {
+        @include padding(20);
+    }
+    .d-f-field {
+        @include margin-bottom(40);
+    }
+    .form-section {
+        .field-form-box {
+            .f-student-info {
+                & > ul {
+                    & > li {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .grade-box {
+        .grade-box__header {
+            h3 {
+                display: $block;
+            }
+            span {
+                display: $block;
+                float: none;
+            }
+        }
+    }
+}
+
+@include media("<=992px") {
+    .bread-crumb_block {
+        h2.title {
+            @include fontsize(25);
+        }
+        .back-btn {
+            @include fontsize(20);
+        }
+        .bread-crumb__list {
+            ul {
+                li {
+                    @include fontsize(18);
+                }
+            }
+        }
+    }
+    .question-box {
+        .question-box-ans-list {
+            li {
+                width: 100%;
+                float: none;
+            }
+        }
+    }
+    .ap-modal {
+        .student-dtl-info {
+            .student-quiz-dtl {
+                .quiz-dtl-list {
+                    .quiz-dtl-list__box {
+                        &> ul {
+                            &>li {
+                                @include fontsize(17);
+                                @include padding(10 0);
+                                @include border-bottom(1, solid, #c6c6c6);
+                            }
+                        }
+                        &.l__box {
+                            border: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media("<=479px") {
+    .b-box {
+        @include padding(20 10);
+    }
+}

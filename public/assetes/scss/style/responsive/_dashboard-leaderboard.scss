@@ -1,0 +1,17 @@
+@include media("<=1200px") {
+    .leader-board-section {
+        .d-tabs-section {
+            @include padding(50 0);
+        }
+    }
+}
+
+@include media("<=767px") {
+    .leader-board-section {
+        .d-tabs-section {
+            .d-tabs {
+                @include margin-left(0);
+            }
+        }
+    }
+}

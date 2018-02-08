@@ -1,0 +1,167 @@
+.reporting-section {
+    .r-top__dtl {
+        background-color: $white;
+        @include margin-top(10);
+        @include padding(30);
+        @include border-round(4);
+        .sub-title {
+            @include fontsize(18);
+            color: $s-color;
+            @include hel-roman;
+            @include margin-top(10);
+            display: $block;
+        }
+        h3.title {
+            @include fontsize(20);
+            @include hel-roman;
+        }
+        .add-s-btn {
+            [class*="icon-"] {
+                @include fontsize(15);
+            }
+        }
+    }
+    .r-heading-block {
+        background-color: $white;
+        @include padding(30);
+        @include border-round(4);
+        h2.title {
+            @include fontsize(25);
+            @include hel-roman;
+        }
+    }
+    .filter-block {
+        @include margin-top(30);
+    }
+}
+
+.reporting-dtl-section {
+    .r-ifnoblock__top {
+        background-color: $white;
+        @include padding(30);
+        @include border-round(4);
+        @include pos(rel, null);
+        .back-btn {
+            @include pos(ab, 30px null null 30px);
+        }
+    }
+    .r-ifnoblock {
+        background-color: $white;
+        @include padding(60 100 40);
+        @include border-round(4);
+        @include margin-top(20);
+        .r-ifnoblock__dtl {
+            .r-ifnoblock__img {
+                @include pos(rel, null);
+                text-align: center;
+                .r-ifnoblock-img {
+                    @include pos(rel, null);
+                    width: 100px;
+                    margin: 0 auto 20px;
+                    img {
+                        width: 100px;
+                        height: 100px;
+                        @include circle();
+                    }
+                    span {
+                        @include pos(ab, null 0 0 null);
+                        width: 34px;
+                        height: 34px;
+                        color: $white;
+                        background-color: $color2;
+                        @include circle();
+                        @include fontsize(20);
+                        line-height: 2;
+                    }
+                }
+                h3.name {
+                    @include fontsize(25);
+                    @include hel-roman;
+                }
+                h4.status {
+                    @include fontsize(20);
+                    @include margin-top(10);
+                }
+            }
+            .r-ifnoblock__info_list {
+                @include padding-top(50);
+                @include fontsize(18);
+                ul {
+                    & > li {
+                        @include padding-bottom(50);
+                        .media {
+                            .media-left {
+                                @include padding-right(30);
+                                span.ico {
+                                    color: #727272;
+                                    @include fontsize(30);
+                                }
+                            }
+                            .media-body {
+                                span.label-name {
+                                    @include hel-roman;
+                                    color: #7d7b7b;
+                                }
+                                p {
+                                    @include fontsize(24);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .filter-block {
+        @include margin-top(30);
+    }
+    .summary-block {
+        @include padding(50 70);
+        @include margin-top(30);
+        background-color: $white;
+        @include border-round(4);
+        .t-block {
+            @include padding(20 0 0);
+        }
+        h2.title {
+            @include fontsize(25);
+            @include hel-roman;
+        }
+    }
+}
+
+.teacher-section {
+    @include padding-top(30);
+    .t-filter-block {
+        .t-filter-block__top {
+            @include padding(30);
+            background-color: $white;
+            @include border-round(4);
+        }
+        h2.title {
+            @include fontsize(25);
+            @include hel-roman;
+        }
+        .total {
+            @include fontsize(22);
+            color: $s-color;
+            @include hel-roman;
+        }
+        .filter-block {
+            @include margin-top(30);
+        }
+    }
+    .summary-block {
+        @include padding(50 70);
+        @include margin-top(30);
+        background-color: $white;
+        @include border-round(4);
+        h2.title {
+            @include fontsize(25);
+            @include hel-roman;
+        }
+        .t-block {
+            @include padding(20 0 0 0);
+        }
+    }
+}

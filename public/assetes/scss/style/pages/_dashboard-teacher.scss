@@ -1,0 +1,14 @@
+.magnet-section {
+    &.is__teacher__dashboard {
+        .list-block {
+            @include padding-top(40);
+            .title {
+                @include fontsize(28);
+                @include hel-roman;
+            }
+            .data-list-block {
+                @include padding(30 0);
+            }
+        }
+    }
+}

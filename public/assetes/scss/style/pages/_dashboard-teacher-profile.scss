@@ -1,0 +1,38 @@
+.tpedit-profile-block {
+    @include padding-top(30);
+    & > .row {
+        @include margin(0 -25);
+        & > [class*="col-"] {
+            @include padding(0 25);
+        }
+    }
+    .edit-form-block {
+        @include padding(50 60);
+        min-height: 845px;
+        background-color: $white;
+        @include border-round(10);
+        -webkit-box-shadow: 0 3px 18px rgba(0, 0, 0, .04);
+        -moz-box-shadow: 0 3px 18px rgba(0, 0, 0, .04);
+        box-shadow: 0 3px 18px rgba(0, 0, 0, .04);
+        .heading-ico {
+            text-align: left;
+            .title-ico {
+                margin: 0 0 25px;
+            }
+        }
+        .field-group {
+            @include margin-top(35);
+            .label-name {
+                font-weight: normal;
+                @include fontsize(18);
+                @include padding-right(20);
+            }
+            .radio-inline {
+                color: #969494;
+                input[type="radio"] {
+                    @include margin-top(5);
+                }
+            }
+        }
+    }
+}

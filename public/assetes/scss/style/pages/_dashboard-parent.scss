@@ -1,0 +1,26 @@
+.parent-dashboard {
+    .parent-dashboard__top {
+        background-color: $white;
+        @include padding(30);
+        @include border-round(6);
+        .title {
+            @include hel-roman;
+            @include fontsize(25);
+        }
+    }
+}
+
+.is__parent-edit-profile {
+    .edit-form-block {
+        min-height: 700px;
+        .field-group {
+            @include margin-top(50);
+        }
+    }
+}
+
+.is__parent-reporting {
+    .filter-block {
+        @include margin-top(0);
+    }
+}

@@ -1,0 +1,22 @@
+//Fonts
+@import "style/base/fonts"; 
+
+//opensans
+
+//font-bold----------------------------
+@include font-face(helveticaneuecyrbold, #{$primary-font-path}/helveticaneuecyr-bold-webfont, normal, normal);
+
+//font-bold-italic
+@include font-face(helveticaneuecyrbold_italic, #{$primary-font-path}/helveticaneuecyr-bolditalic-webfont, normal, normal);
+
+//font-italic
+@include font-face(helveticaneuecyritalic, #{$primary-font-path}/helveticaneuecyr-italic-webfont, normal, normal);
+
+//font-light
+@include font-face(helveticaneuecyrlight, #{$primary-font-path}/helveticaneuecyr-light-webfont, normal, normal);
+
+//font-medium
+@include font-face(helveticaneuecyrmedium, #{$primary-font-path}/helveticaneuecyr-medium-webfont, normal, normal);
+
+//font-regular
+@include font-face(helveticaneuecyrroman, #{$primary-font-path}/helveticaneuecyr-roman-webfont, normal, normal);

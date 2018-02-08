@@ -1,0 +1,15 @@
+.leader-board-section {
+    .d-tabs-section {
+        @include padding(60 0);
+        .d-tabs {
+            @include margin-left(25);
+        }
+    }
+    .d-content {
+        @include padding(40);
+        background-color: $white;
+        .data-list-block {
+            @include padding-top(10);
+        }
+    }
+}

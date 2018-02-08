@@ -1,0 +1,74 @@
+.payment-block {
+    background-color: $white;
+    @include padding(30);
+    @include border-round(6);
+    -webkit-box-shadow: 0 3px 18px rgba(0, 0, 0, .04);
+    -moz-box-shadow: 0 3px 18px rgba(0, 0, 0, .04);
+    box-shadow: 0 3px 18px rgba(0, 0, 0, .04);
+    @include padding(50 20 70);
+    .payment-form {
+        max-width: 650px;
+        margin: 80px auto 0;
+        .payment-form__option {
+            .payment-form__option__box {
+                text-align: center;
+                @include border(1, solid, #a8a9a9);
+                @include border-round(8);
+                width: 100%;
+                @include padding(20 0);
+                h3 {
+                    @include fontsize(18);
+                    @include hel-roman;
+                    color: #a8a9a9;
+                }
+                span {
+                    color: #a8a9a9;
+                    @include fontsize(35);
+                }
+                &.active {
+                    border-color: $color3;
+                    h3 {
+                        color: $color3;
+                    }
+                    span {
+                        color: $color3;
+                    }
+                }
+            }
+        }
+        .field-group {
+            @include margin-top(60);
+            h3.title {
+                @include fontsize(18);
+                @include hel-roman;
+                @include padding-bottom(20);
+            }
+            .form-group {
+                @include margin-bottom(25);
+            }
+            .input-group-addon {
+                background-color: transparent;
+                border-radius: 0;
+                border-color: #e3e3e3;
+                @include fontsize(18);
+                color: #e3e3e3;
+                padding-right: 0;
+            }
+            .form-control {
+                height: 50px;
+                @include border(1, solid, #e3e3e3);
+                @include fontsize(16);
+                @include box-shadow-none;
+                border-left: 0;
+            }
+            .select-control {
+                height: 50px;
+                &:after {
+                    content: "\f107";
+                    color: #949393;
+                    right: 10px;
+                }
+            }
+        }
+    }
+}

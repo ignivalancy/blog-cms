@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+		
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link href="/styles/site.css" rel="stylesheet">
+		<link href="/styles/custom_styles.css" rel="stylesheet">
+		{{#if data.post}}
+		{{#if data.post.meta.title}}
+		<title>{{data.post.meta.title}}</title>
+		<meta property="og:title" content="{{data.post.meta.title}}">
+		<meta name="twitter:title" content="{{data.post.meta.title}}">
+		{{else}}
+		<title>{{data.post.title}}</title>
+		<meta property="og:title" content="{{data.post.title}}">
+		<meta name="twitter:title" content="{{data.post.title}}">
+		{{/if}}
+		{{#if data.post.meta.description}}
+		<meta name="description" content="{{data.post.meta.description}}">
+		<meta property="og:description" content="{{data.post.meta.description}}">
+		<meta name="twitter:description" content="{{data.post.meta.description}}">
+		{{else}}
+		<meta name="description" content="{{data.post.content.brief}}">
+		<meta property="og:description" content="{{data.post.content.brief}}">
+		<meta name="twitter:description" content="{{data.post.content.brief}}">
+		{{/if}}
+		<meta property="og:type" content="article">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta property="og:image" content="{{data.post.image.url}}">
+		<meta name="twitter:image:src" content="{{data.post.image.url}}">
+		<meta property="og:url" content="{{data.post.fullPostUrl}}">
+		<meta name="twitter:url" content="{{data.post.fullPostUrl}}">
+		<meta property="article:published_time" content="{{data.post.publishedDate}}">
+		{{# each data.post.categories}}
+		<meta property="article:tag" content="{{name}}">
+		{{/each}}
+		<meta name="keywords" content="{{# each data.post.categories}}{{name}}, {{/each}}">
+		{{else}}
+		<title>TopperQ Blog</title>
+		<meta name="description" content="general description">
+		<meta property="og:image" content="{{baseUrl}}/images/logo.png">
+		<meta name="twitter:image:src" content="{{baseUrl}}/images/logo.png">
+		<meta name="keywords" content="Node.js, development, api">
+		{{/if}}
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		{{!-- This file provides the default styling for the KeystoneJS Content Editor
+		- only renders when user is logged in and admin--}}
+		{{{isAdminEditorCSS user}}}
+		{{!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+		//- Safely remove this block if you are not targeting IE8 --}}
+		<!--[if lt IE 9]>
+		<script src="//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.js"></script>
+		<script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="form-section">
+			<div class="banner-block">
+				<div class="inner-wrapper ">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="logo">
+									<a href="/"><img src="/images/logo.png" alt="img" class="img-responsive"/></a>
+								</div>
+							</div>
+							<br />
+							<br />
+							<div class="col-md-12 privacy" id="privacy">
+								<div id="header">									
+									<div id="body">
+										<!--
+											Flash messages allow you to display once-off status messages to users, e.g. form
+											validation errors, success messages, etc
+										-->
+										{{#if messages}}
+										<div id="flash-messages" >
+											{{#if messages.info}}
+											<div class="alert alert-info">
+												{{{flashMessages messages.info}}}
+											</div>
+											{{/if}}
+											{{#if messages.success}}
+											<div class="alert alert-success">
+												{{{flashMessages messages.success}}}
+											</div>
+											{{/if}}
+											{{#if messages.warning}}
+											<div class="alert alert-warning">
+												{{{flashMessages messages.warning}}}
+											</div>
+											{{/if}}
+											{{#if messages.error}}
+											<div class="alert alert-danger">
+												{{{flashMessages messages.error}}}
+											</div>
+											{{/if}}
+										</div>
+										{{/if}}
+										<!-- The content block should contain the body of your template's content-->
+										{{{body}}}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="inner-footer">
+				
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-sm-3"><span class="cpy-txt margin-top-2x block">Copyright &copy; 2018 TopperQ</span></div>
+						<div class="col-md-7 col-sm-7 text-center">
+							<ul class="footer-ul">
+								<li class="active">
+									<a href="/">Home </a>
+								</li>
+								<li>
+									<a to="/pricing">Pricing </a>
+								</li>
+								<li>
+									<a href="/terms-and-conditions">Terms & Conditions </a>
+								</li>
+								<li>
+									<a href="/privacy-policy">Privacy Policy </a>
+								</li>
+								
+								<li>
+									<a href="/faqs">FAQ </a>
+								</li>
+								<li >
+									<a href="/about-us">About Us </a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-2 col-sm-2">
+							<div class="f-social-links">
+								<a href="http://www.twitter.com" target="_blank" class="f-s-ico twitter-ico"> <i class="fa fa-twitter"> </i></a>
+								<a href="http://www.facebook.com" target="_blank" class="f-s-ico facebook-ico"> <i class="fa fa-facebook"></i></a>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		
+		
+		{{!--
+		//- jQuery 1.11.3 is included by default, and required by both Bootstrap
+		//- and the KeystoneJS Content Editor. If you are not targeting IE8,
+		//- you can upgrade to 2.1.4 (also bundled) for better performance.
+		--}}
+		<script src="/js/jquery/jquery-1.11.3.min.js"></script>
+		{{!--
+		//- Customise which Bootstrap javascript files are served by including
+		//- them specifically here, instead of bootstrap-3.3.5.min.js
+		--}}
+		<script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script>
+		{{{isAdminEditorJS user}}}
+	</body>
+</html>

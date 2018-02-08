@@ -1,0 +1,31 @@
+footer {
+    .inner-footer {
+        background-color: $color02;
+        @include padding(20 0);
+        color: $white;
+        @include fontsize(18);
+        .f-social-links {
+            text-align: right;
+            .f-s-ico {
+                width: 44px;
+                height: 44px;
+                @include circle();
+                background-color: $white;
+                display: $inline;
+                text-align: center;
+                line-height: 44px;
+                @include fontsize(22);
+                @include margin-left(18);
+                &.facebook-ico {
+                    color: #5b77ca;
+                }
+                &.twitter-ico {
+                    color: #2e97ea;
+                }
+                &:hover {
+                    @include opacity(0.8);
+                }
+            }
+        }
+    }
+}

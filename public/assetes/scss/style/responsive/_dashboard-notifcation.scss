@@ -1,0 +1,25 @@
+@include media("<=767px") {
+    .nt-list {
+        .n-list__box {
+            .media-left {
+                @include padding-right(10);
+            }
+        }
+    }
+}
+
+@include media("<=1200px") {
+    .notification-section {
+        .notification-section__inner {
+            @include padding(40 60 60);
+        }
+    }
+}
+
+@include media("<=992px") {
+    .notification-section {
+        .notification-section__inner {
+            @include padding(40 30);
+        }
+    }
+}

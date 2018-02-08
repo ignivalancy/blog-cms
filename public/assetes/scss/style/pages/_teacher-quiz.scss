@@ -1,0 +1,60 @@
+.tq-section {
+    .tq__heading__block {
+        background-color: $white;
+        @include border-round(4);
+        @include padding(30);
+        .title {
+            @include hel-roman;
+            @include fontsize(25);
+            @include margin-top(10);
+        }
+    }
+    .tq-list-block {
+        @include margin-top(50);
+        .title {
+            @include hel-roman;
+            @include fontsize(25);
+        }
+        .data-list-block {
+            @include padding(25 0 0);
+        }
+    }
+}
+
+.tq-section {
+    .st-add-block {
+        .st-add-form {
+            .new-btn {
+                @include margin-right(15);
+                @include margin-bottom(10);
+            }
+            .prev-btn {
+                @include margin-bottom(10);
+            }
+        }
+    }
+}
+
+.teacher__quiz__reporting {
+    .filter-block {
+        @include margin-top(40);
+        .title {
+            @include fontsize(25);
+            @include hel-roman;
+        }
+        .filter-block__box {
+            @include margin-top(30);
+        }
+    }
+    .data-list-block {
+        @include padding-top(40);
+        .title {
+            @include hel-roman;
+            @include fontsize(25);
+            @include margin-top(10);
+        }
+        .data-list__table {
+            @include margin-top(30);
+        }
+    }
+}

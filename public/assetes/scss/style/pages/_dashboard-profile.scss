@@ -1,0 +1,37 @@
+.edit-profile-section {
+    .form-box {
+        @include margin-top(70);
+    }
+    .form-tabs {
+        @include margin-top(50);
+    }
+    .edit-price-block {
+        h2.title {
+            @include fontsize(30);
+            @include hel-roman;
+            text-align: center;
+        }
+        .price-table-block {
+            @include padding(120 0 0);
+        }
+    }
+}
+
+.c-form-section {
+    @include padding(50 0 40);
+    .c-form-box {
+        @include border-round(10);
+        background-color: $white;
+        max-width: 650px;
+        width: 100%;
+        margin: 0 auto;
+        @include padding(50 60);
+        .field-group {
+            @include padding-top(60);
+        }
+        .d-f-field
+        {
+            @include margin-bottom(40);
+        }
+    }
+}

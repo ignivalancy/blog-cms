@@ -1,0 +1,16 @@
+@include media("<=1200px") {
+    .tpedit-profile-block {
+        .edit-form-block {
+            @include padding(40 30);
+        }
+    }
+}
+
+@include media("<=992px") {
+    .tpedit-profile-block {
+        .edit-form-block {
+            @include margin-bottom(20);
+            min-height: inherit;
+        }
+    }
+}
