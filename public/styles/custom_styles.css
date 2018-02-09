@@ -183,6 +183,7 @@ footer .inner-footer {
 }
 .footer-ul a{
 	color: #fff;
+    text-decoration: none;
 }
 .footer-ul li::after {
     content: "|";

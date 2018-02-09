@@ -5,6 +5,14 @@ require('dotenv').config();
 // Require keystone
 var keystone = require('keystone');
 var handlebars = require('express-handlebars');
+var cloudinary = require('cloudinary');
+
+const configs = require("./config");
+const cloudinaryConfigs = configs.cloudinary;
+const CONST = configs.CONST;
+const db = configs.db;
+
+const mongoConnection = "mongodb://" + db.username +":"+db.password+"@"+ db.host + ":" + db.port + "/" + db.name;
 
 // Initialise Keystone with your project's configuration.
 // See http://keystonejs.com/guide/config for available options
@@ -32,8 +40,13 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'Blogusers',
-	'mongo': "mongodb://Usrlive93:Uje2Op304Ye@168.1.114.232:27017/Topperqlive",
-	'port': 5003
+	'mongo': mongoConnection,
+	'port': 5003,
+	'host':'168.1.114.232',
+	'cloudinary secure':true,
+	'env': 'production',
+	'cloudinary config': { cloud_name: cloudinaryConfigs.cloud_name, api_key: cloudinaryConfigs.api_key, api_secret: cloudinaryConfigs.api_secret },
+	'cookie secret': CONST.cookie_secret
 });
 
 // Load your project's Models
@@ -49,7 +62,12 @@ keystone.set('locals', {
 	editable: keystone.content.editable,
 });
 
-keystone.set('cloudinary config', 'cloudinary://637254884144133:pKLHI8Db6pZoahj9ylqoFYBhd1g@topperq' );
+cloudinary.config({ 
+  cloud_name: cloudinaryConfigs.cloud_name, 
+  api_key: cloudinaryConfigs.api_key, 
+  api_secret: cloudinaryConfigs.api_secret
+});
+
 
 // Load your project's Routes
 keystone.set('routes', require('./routes'));

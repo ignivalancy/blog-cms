@@ -1,5 +1,5 @@
 <div class="margin-top-2x">
-	<h1>Topperq Blog.</h1>
+	<h1 style="text-transform:none">TopperQ Blog.</h1>
 </div>
 <div class="row">
 	<div class="col-sm-8 col-md-9">
@@ -7,10 +7,11 @@
 		<div class="blog">
 			{{# each data.posts.results}}
 			<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
-				{{#if image.url}}<span class="blog-img pull-right"><img src="{{{cloudinaryUrl image  crop='fit' }}}" class="img  img-thumbnail"> </span>{{/if}}
+				{{#if image.url}}<span class="blog-img pull-right"><a href="{{postUrl slug}}"><img src="{{{cloudinaryUrl image  crop='fit' }}}" class="img  img-thumbnail"></a> </span>{{/if}}
 				<h2><a href="{{postUrl slug}}">{{{title}}}</a></h2>
-				<p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
+				<p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}} 
 					{{#if author.name.first}}by {{author.name.first}}{{/if}}
+				}
 				</p>
 				
 				<p>{{{content.brief}}}</p>
@@ -24,7 +25,8 @@
 		<div class="list-group">
 			<a href="/blog" class="active list-group-item">All Categories</a>
 			{{# each data.categories }}
-			<a href="{{categoryUrl key}}" class="false list-group-item">{{name}}</a>
+			
+			<a href="{{categoryUrl key}}"  class="false list-group-item">{{name}}</a>{{log key}}
 			{{/each}}
 		</div>
 	</div>
