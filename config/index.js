@@ -1,7 +1,7 @@
 /*
  * @file: index.js
- * @description: includes all configurations in a single file
- * @date: Jan 23, 2018
+ * @description: exporting all configurations i.e, (cloudinary, constants and database configurations)
+ * @date: 09 Feb, 2018
  * @author: Banti Ram
  */
 

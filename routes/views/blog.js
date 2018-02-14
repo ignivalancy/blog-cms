@@ -20,13 +20,11 @@ exports = module.exports = function (req, res) {
 	view.on('init', function (next) {
 
 		keystone.list('PostCategory').model.find().sort('name').exec(function (err, results) {
-
 			if (err || !results.length) {
 				return next(err);
 			}
 
 			locals.data.categories = results;
-
 			// Load the counts for each category
 			async.each(locals.data.categories, function (category, next) {
 
@@ -43,7 +41,6 @@ exports = module.exports = function (req, res) {
 
 	// Load the current category filter
 	view.on('init', function (next) {
-
 		if (req.params.category) {
 			keystone.list('PostCategory').model.findOne({ key: locals.filters.category }).exec(function (err, result) {
 				locals.data.category = result;
@@ -56,20 +53,19 @@ exports = module.exports = function (req, res) {
 
 	// Load the posts
 	view.on('init', function (next) {
-
 		var q = keystone.list('Post').paginate({
 			page: req.query.page || 1,
-			perPage: 10,
+			perPage: 5,
 			maxPages: 10,
-			filters: {
-				state: 'published',
-			},
+			
 		})
-			.sort('-publishedDate')
-			.populate('author categories');
+		.where('state','published')
+		.sort('-publishedDate')
+		.populate('author categories')
 
 		if (locals.data.category) {
 			q.where('categories').in([locals.data.category]);
+
 		}
 
 		q.exec(function (err, results) {

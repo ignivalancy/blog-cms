@@ -28,6 +28,35 @@ module.exports = function () {
 		}
 	};
 
+
+	_helpers.ifCond = function (v1, operator, v2, options) {
+    	switch (operator) {
+	        case '==':
+	            return (v1 == v2) ? options.fn(this) : options.inverse(this);
+	        case '===':
+	            return (v1 === v2) ? options.fn(this) : options.inverse(this);
+	        case '!=':
+	            return (v1 != v2) ? options.fn(this) : options.inverse(this);
+	        case '!==':
+	            return (v1 !== v2) ? options.fn(this) : options.inverse(this);
+	        case '<':
+	            return (v1 < v2) ? options.fn(this) : options.inverse(this);
+	        case '<=':
+	            return (v1 <= v2) ? options.fn(this) : options.inverse(this);
+	        case '>':
+	            return (v1 > v2) ? options.fn(this) : options.inverse(this);
+	        case '>=':
+	            return (v1 >= v2) ? options.fn(this) : options.inverse(this);
+	        case '&&':
+	            return (v1 && v2) ? options.fn(this) : options.inverse(this);
+	        case '||':
+	            return (v1 || v2) ? options.fn(this) : options.inverse(this);
+	        default:
+	            return options.inverse(this);
+		}
+	};
+
+
 	/**
 	 * Port of Ghost helpers to support cross-theming
 	 * ==============================================
@@ -199,7 +228,13 @@ module.exports = function () {
 	// might be a ghost helper
 	// used for pagination urls on blog
 	_helpers.pageUrl = function (pageNumber, options) {
-		return '/blog?page=' + pageNumber;
+		if(options === undefined){
+			return '/blog?page=' + pageNumber;
+		}else{
+			return '/blog/'+options.key+'?page='+pageNumber;
+		}
+
+		
 	};
 
 	// create the category url for a blog-category page
@@ -229,7 +264,6 @@ module.exports = function () {
 
 	_helpers.paginationNavigation = function (pages, currentPage, totalPages, options) {
 		var html = '';
-
 		// pages should be an array ex.  [1,2,3,4,5,6,7,8,9,10, '....']
 		// '...' will be added by keystone if the pages exceed 10
 		_.each(pages, function (page, ctr) {
@@ -247,29 +281,30 @@ module.exports = function () {
 			}
 
 			// get the pageUrl using the integer value
-			var pageUrl = _helpers.pageUrl(page);
+			var pageUrl = _helpers.pageUrl(page, options.data.category);
 			// wrapup the html
 			html += '<li' + liClass + '>' + linkTemplate({ url: pageUrl, text: pageText }) + '</li>\n';
+
 		});
 		return html;
 	};
 
 	// special helper to ensure that we always have a valid page url set even if
 	// the link is disabled, will default to page 1
-	_helpers.paginationPreviousUrl = function (previousPage, totalPages) {
+	_helpers.paginationPreviousUrl = function (previousPage, totalPages ) {
 		if (previousPage === false) {
 			previousPage = 1;
 		}
-		return _helpers.pageUrl(previousPage);
+		return _helpers.pageUrl(previousPage, totalPages.data.category);
 	};
 
 	// special helper to ensure that we always have a valid next page url set
 	// even if the link is disabled, will default to totalPages
-	_helpers.paginationNextUrl = function (nextPage, totalPages) {
+	_helpers.paginationNextUrl = function (nextPage, totalPages, options) {
 		if (nextPage === false) {
 			nextPage = totalPages;
 		}
-		return _helpers.pageUrl(nextPage);
+		return _helpers.pageUrl(nextPage, options.data.category);
 	};
 
 

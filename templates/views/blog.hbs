@@ -5,13 +5,20 @@
 	<div class="col-sm-8 col-md-9">
 		<h4 class="text-weight-normal">Showing {{ data.posts.results.length}} post.</h4>
 		<div class="blog">
+			{{#ifCond data.posts.results.length '===' 0}}
+				<div><br/>
+					<p class="well text-center">There are no posts to show in category "<b>{{data.category.key}}</b>"
+					{{#ifCond data.posts.currentPage '!=' 1}}
+						in <b>page={{data.posts.currentPage}}</b>.</p>
+					{{/ifCond}}
+				</div>
+			{{/ifCond}}
 			{{# each data.posts.results}}
 			<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
 				{{#if image.url}}<span class="blog-img pull-right"><a href="{{postUrl slug}}"><img src="{{{cloudinaryUrl image  crop='fit' }}}" class="img  img-thumbnail"></a> </span>{{/if}}
 				<h2><a href="{{postUrl slug}}">{{{title}}}</a></h2>
-				<p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}} 
+				<p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
 					{{#if author.name.first}}by {{author.name.first}}{{/if}}
-				}
 				</p>
 				
 				<p>{{{content.brief}}}</p>
@@ -23,10 +30,11 @@
 	<div class="col-sm-4 col-md-3 cat-list">
 		<h4>Categories</h4>
 		<div class="list-group">
-			<a href="/blog" class="active list-group-item">All Categories</a>
+			<a href="/blog" {{#ifeq data.category.key undefined}}class="active list-group-item"{{/ifeq}} class="false list-group-item">All Categories</a>
 			{{# each data.categories }}
-			
-			<a href="{{categoryUrl key}}"  class="false list-group-item">{{name}}</a>{{log key}}
+			<a href="{{categoryUrl key}}"
+				{{#ifeq ../data.category.key key}}class="active list-group-item"{{/ifeq}} class="false list-group-item">{{name}}
+			</a>
 			{{/each}}
 		</div>
 	</div>

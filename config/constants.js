@@ -1,7 +1,7 @@
 /*
  * @file: constants.js
  * @description: settings constants to be used in the app
- * @date: Jan 23, 2018
+ * @date: 09 Feb, 2018
  * @author: Banti Ram
  */
 
