@@ -7,9 +7,9 @@
 		<div class="blog">
 			{{#ifCond data.posts.results.length '===' 0}}
 				<div><br/>
-					<p class="well text-center">There are no posts to show in category "<b>{{data.category.key}}</b>"
+					<p class="well text-center">There are no posts to show in category "<b style="text-transform: capitalize">{{data.category.key}}</b>"
 					{{#ifCond data.posts.currentPage '!=' 1}}
-						in <b>page={{data.posts.currentPage}}</b>.</p>
+						on <b>Page={{data.posts.currentPage}}</b>.</p>
 					{{/ifCond}}
 				</div>
 			{{/ifCond}}
