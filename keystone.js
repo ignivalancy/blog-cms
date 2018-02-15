@@ -42,9 +42,9 @@ keystone.init({
 	'user model': 'Blogusers',
 	'mongo': mongoConnection,
 	'port': 5003,
-	// 'host':'168.1.114.232',
+	'host':'168.1.114.232',
 	'cloudinary secure':true,
-	// 'env': 'production',
+	'env': 'production',
 	'cloudinary config': { cloud_name: cloudinaryConfigs.cloud_name, api_key: cloudinaryConfigs.api_key, api_secret: cloudinaryConfigs.api_secret },
 	'cookie secret': CONST.cookie_secret
 });
