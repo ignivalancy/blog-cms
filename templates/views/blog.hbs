@@ -15,7 +15,7 @@
 			{{/ifCond}}
 			{{# each data.posts.results}}
 			<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
-				{{#if image.url}}<span class="blog-img pull-right"><a href="{{postUrl slug}}"><img src="{{{cloudinaryUrl image  crop='fit' }}}" class="img  img-thumbnail"></a> </span>{{/if}}
+				{{#if image.url}}<span class="blog-img"><a href="{{postUrl slug}}"><img src="{{{cloudinaryUrl image  crop='fit' }}}" class="img"></a> </span>{{/if}}
 				<h2><a href="{{postUrl slug}}">{{{title}}}</a></h2>
 				<p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
 					{{#if author.name.first}}by {{author.name.first}}{{/if}}
